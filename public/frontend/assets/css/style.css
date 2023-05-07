@@ -1468,9 +1468,10 @@ input[type=submit]:focus {
   width: auto;
   height: auto;
   margin: 0 6px;
+
 }
 .slick-dots li button {
-  background-color: #c6c6c6;
+  background-color: #c6c6c6bb;
   -webkit-border-radius: 100%;
   -moz-border-radius: 100%;
   -ms-border-radius: 100%;
@@ -1482,10 +1483,10 @@ input[type=submit]:focus {
   display: none;
 }
 .slick-dots li button:hover {
-  background-color: #3A78C9;
+  background-color: #ffffff;
 }
 .slick-dots li.slick-active button {
-  background-color: #3A78C9;
+  background-color: #ffffff;
 }
 
 .ui-datepicker {
@@ -2722,7 +2723,7 @@ input[type=submit]:focus {
   z-index: 1;
 }
 .home-banner .overlay {
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.6);
 }
 @media screen and (max-width: 575px) {
   .home-banner {

@@ -44,6 +44,9 @@ $( document ).ready(function() {
     $input.change();
     return false;
   });
+
+
+
   $('.plus-btn').click(function () {
     var $input = $(this).parent().find('input.quantity');
     $input.val(parseInt($input.val()) + 1);
@@ -51,6 +54,15 @@ $( document ).ready(function() {
     return false;
   });
 });
+
+// window.setInterval(function(){
+//   var $input = $(this).parent().find('input.quantity');
+//     var count = parseInt($input.val()) - 1;
+//     count = count < 1 ? 1 : count;
+//     $input.val(count);
+//     $input.change();
+//     return false;
+// }, 2000);
 
 /* Show or Hide Search field on clicking search icon */
 $( document ).on( 'click', '.header-search-icon a', function(e){
@@ -81,12 +93,11 @@ $('#navigation').slicknav({
 $('.home-banner-slider').slick({
   dots: true,
   infinite: true,
-  autoplay: false,
-  speed: 1200,
-  fade: true,
-  slidesToShow: 1,
-  slidesToScroll: 1,
-  adaptiveHeight: false,
+  speed: 1000,
+  prevArrow: false,
+  nextArrow: false,
+  slidesToShow: 3,
+  autoplay: true,
 });
 
 /* Home client slider */
