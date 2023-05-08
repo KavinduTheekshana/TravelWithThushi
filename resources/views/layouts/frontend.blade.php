@@ -24,12 +24,15 @@
       <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet">
       <!-- Custom CSS -->
       <link rel="stylesheet" type="text/css" href="{{ asset('frontend/assets/css/style.css')}}">
-      <title>Traveler – Travel & Trip Business HTML5 Template</title>
+      {{-- swiperjs  --}}
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+      <title>Seylan Odyssey | I help you to enjoy your journey</title>
    </head>
    <body class="home">
       <div id="siteLoader" class="site-loader">
          <div class="preloader-content">
-            <img src="assets/images/loader1.gif" alt="">
+            <img src="{{ asset('frontend/assets/images/loader1.gif')}}" alt="">
          </div>
       </div>
 
@@ -51,5 +54,23 @@
           <script src="{{ asset('frontend/assets/vendors/fancybox/dist/jquery.fancybox.min.js')}}"></script>
           <script src="{{ asset('frontend/assets/vendors/slick-nav/jquery.slicknav.js')}}"></script>
           <script src="{{ asset('frontend/assets/js/custom.min.js')}}"></script>
+          <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+          <script>
+            var swiper = new Swiper(".mySwiper", {
+              spaceBetween: 30,
+              effect: "fade",
+              navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+              },
+              pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+              },
+            });
+          </script>
+
+          
        </body>
     </html>

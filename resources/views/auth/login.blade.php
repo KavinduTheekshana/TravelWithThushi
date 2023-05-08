@@ -22,10 +22,10 @@
                             <div class="card-body p-sm-5">
                                 <div class="">
                                     <div class="mb-3 text-center">
-                                        <img src="assets/images/logo-icon.png" width="60" alt="">
+                                        <img class="login-image" src="{{ asset('backend/assets/images/seylanodysseyDark.png') }}" width="60" alt="">
                                     </div>
                                     <div class="text-center mb-4">
-                                        <h5 class="">Travel With Thushi</h5>
+                                        {{-- <h5 class="">Travel With Thushi</h5> --}}
                                         <p class="mb-0">Please enter your login details. This page is intended for site administrators only.</p>
                                     </div>
                                     <div class="form-body">

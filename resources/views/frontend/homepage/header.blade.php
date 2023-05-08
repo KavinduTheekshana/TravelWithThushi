@@ -8,14 +8,14 @@
                    <i aria-hidden="true" class="icon icon-phone-call2"></i>
                    <div class="header-contact-details">
                       <span class="contact-label">For Further Inquires :</span>
-                      <h5 class="header-contact-no">+01 (977) 2599 12</h5>
+                      <h5 class="header-contact-no">+44 7863 844411</h5>
                    </div>
                 </a>
              </div>
              <div class="site-logo text-center">
                 <h1 class="site-title">
                    <a href="index.html">
-                      <img src="assets/images/site-logo.png" alt="Logo">
+                      <img src="{{ asset('frontend/assets/images/seylanodyssey.png') }}" alt="Logo">
                    </a>
                 </h1>
              </div>

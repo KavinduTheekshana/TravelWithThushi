@@ -54,7 +54,7 @@ a {
 }
 
 .logo-icon {
-	width: 45px
+	width:80%;
 }
 
 .logo-text {
@@ -651,7 +651,9 @@ height: 100%;
 	object-fit: cover;
 }
 
-
+.login-image{
+	width: 70%;
+}
 
 .error {
     color: #dc3545;

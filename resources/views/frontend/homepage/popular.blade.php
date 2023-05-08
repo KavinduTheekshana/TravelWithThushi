@@ -6,7 +6,7 @@
              <div class="section-heading">
                 <h5 class="sub-title">UNCOVER PLACE</h5>
                 <h2 class="section-title">POPULAR DESTINATION</h2>
-                <p>Fusce hic augue velit wisi quibusdam pariatur, iusto primis, nec nemo, rutrum. Vestibulum cumque laudantium. Sit ornare mollitia tenetur, aptent.</p>
+                <p>Explore the must-see destinations of Sri Lanka, including ancient cities, pristine beaches, and natural wonders.</p>
              </div>
           </div>
        </div>
