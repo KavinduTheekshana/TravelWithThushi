@@ -18,7 +18,12 @@ body {
 a {
 	text-decoration: none
 }
-
+.placeholder-image{
+	width: 300px;
+}
+.form-row{
+	margin-bottom: 20px;
+}
 .wrapper {
 	width: 100%;
 	position: relative
