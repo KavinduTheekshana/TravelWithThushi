@@ -16,10 +16,11 @@ return new class extends Migration
             $table->string('title');
             $table->string('slug');
             $table->boolean('status')->default(1);
+            $table->boolean('popular_status')->default(0);
             $table->string('location');
             $table->string('category');
             $table->string('image');
-            $table->string('description');
+            $table->longText('description');
             $table->timestamps();
         });
     }

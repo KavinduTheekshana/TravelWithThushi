@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Destinations;
 use Illuminate\Http\Request;
+use DB;
 
 class DestinationsController extends Controller
 {
@@ -14,7 +15,9 @@ class DestinationsController extends Controller
 
     public function list()
     {
-        return view('backend.destination_list');
+        $destinations = DB::table('destinations')->get(); 
+        return view('backend.destination_list',['destinations'=>$destinations]);
+        // return view('backend.destination_list');
     }
 
     public function add()

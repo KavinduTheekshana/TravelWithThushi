@@ -33,28 +33,7 @@
                     <h6 class="mb-0 text-uppercase">Add a New Destination to your list</h6>
                     <hr />
 
-                    @if (count($errors) > 0)
-                        <div class="alert alert-danger border-0 bg-danger alert-dismissible fade show py-2">
-                            <div class="d-flex align-items-center">
-                                <div class="font-35 text-white"><i class='bx bxs-message-square-x'></i>
-                                </div>
-                                <div class="ms-3">
-                                    <h6 class="mb-0 text-white"><strong>Whoops!</strong> There were some problems with
-                                        your input.</h6>
-                                    <div class="text-white">
-                                        <ul>
-                                            @foreach ($errors->all() as $error)
-                                                <li>{{ $error }}</li>
-                                            @endforeach
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <button type="button" class="btn-close" data-bs-dismiss="alert"
-                                aria-label="Close"></button>
-                        </div>
-                    @endif
-
+                    @include('backend.alert')
 
                     <div class="card">
                         <div class="card-body">
@@ -64,25 +43,25 @@
                                 <div class="col-md-12">
                                     <div class="form-row">
                                         <label for="input1" class="form-label">Title</label>
-                                        <input type="text" class="form-control" id="myTextbox" name="title"
+                                        <input type="text" class="form-control" id="myTextbox" name="title" required
                                             placeholder="Destination Title">
                                     </div>
 
-                                    <div class="form-row">
-                                        <label for="input1" class="form-label">Slag</label>
-                                        <input type="text" class="form-control" id="mySlugbox" name="slug"
+                                    {{-- <div class="form-row">
+                                        <label for="input1" class="form-label">Slag</label> --}}
+                                        <input hidden type="text" class="form-control" id="mySlugbox" name="slug" required
                                             placeholder="Destination Title Slag" readonly>
-                                    </div>
+                                    {{-- </div> --}}
 
                                     <div class="form-row">
                                         <label for="input1" class="form-label">Location</label>
-                                        <input type="text" class="form-control" name="location"
+                                        <input type="text" class="form-control" name="location" required
                                             placeholder="Location">
                                     </div>
 
                                     <div class="form-row">
                                         <label for="input7" class="form-label">Category</label>
-                                        <select id="input7" class="form-select" name="category">
+                                        <select id="input7" class="form-select" name="category" required>
                                             <option selected>Choose...</option>
                                             <option value="Adventure">Adventure</option>
                                             <option value="Beach and Coastal">Beach and Coastal</option>
@@ -102,19 +81,19 @@
                                         <label for="input1" class="form-label">Cover Image</label>
                                         <div class="input-group mb-3">
                                             <label class="input-group-text" for="inputGroupFile01">Upload</label>
-                                            <input type="file" class="form-control" name="image"
+                                            <input type="file" class="form-control" name="image" required
                                                 id="inputGroupFile01" onchange="readURL(this);">
                                         </div>
 
                                         <img id="blah"
-                                            src="{{ asset('backend/assets/images/btx-placeholder-04-2.jpg') }}"
+                                            src="{{ asset('backend/assets/images/default.jpg') }}"
                                             class="placeholder-image" alt="your image" />
                                     </div>
 
                                     <div class="form-row">
                                         <label for="input1" class="form-label">Description</label>
 
-                                        <textarea id="myeditorinstance" name="description">Hello, World!</textarea>
+                                        <textarea id="myeditorinstance" name="description" required>Hello, World!</textarea>
 
 
                                         {{-- <div class="mt-0 pt-5 pb-5" id="editor">
