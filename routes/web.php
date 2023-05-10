@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\DashboardController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\DestinationsController;
@@ -17,15 +18,16 @@ use Illuminate\Support\Facades\Auth;
 
 
 // Frontend Routes 
-Route::get('/', function () {
-    return view('frontend/home');
-});
+Route::get('/', [HomeController::class, 'index'])->name('/');
+// Route::get('/', function () {
+//     return view('frontend/home');
+// });
 
-// Backend Routs 
+// Auth Routs 
 Auth::routes(['register' => false]);
 
 // Dashboard 
-Route::get('/dashboard', [HomeController::class, 'index'])->name('dashboard');
+Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
 // Destinations 
 Route::get('/destinations-list', [DestinationsController::class, 'list'])->name('destinations.list');

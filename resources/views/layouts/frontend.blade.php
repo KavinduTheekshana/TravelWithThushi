@@ -28,6 +28,7 @@
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
 
       <title>Seylan Odyssey | I help you to enjoy your journey</title>
+      @vite('resources/js/app.js')
    </head>
    <body class="home">
       <div id="siteLoader" class="site-loader">

@@ -12,8 +12,9 @@
        </div>
        <div class="destination-section">
           <div class="row">
+            @foreach ($destinations as $destination)
              <div class="col-lg-4 col-md-6">
-                <article class="destination-item" style="background-image: url(assets/images/img1.jpg);">
+                <article class="destination-item" style="background-image: url({{asset(url($destination->image))}});">
                    <div class="destination-content">
                       <div class="rating-start-wrap">
                          <div class="rating-start">
@@ -21,16 +22,17 @@
                          </div>
                       </div>
                       <span class="cat-link">
-                         <a href="destination.html">ITALY</a>
+                         <a href="destination.html">{{$destination->location}}</a>
                       </span>
                       <h3>
-                         <a href="package-detail.html">SAN MIGUEL</a>
+                         <a href="package-detail.html">{{$destination->title}}</a>
                       </h3>
-                      <p>Fusce hic augue velit wisi ips quibusdam pariatur, iusto.</p>
+                      <p>{{ Str::limit(str_replace('&nbsp;', ' ', strip_tags($destination->description)), 50, '... read more') }}</p>
                    </div>
                 </article>
              </div>
-             <div class="col-lg-4 col-md-6">
+             @endforeach
+             {{-- <div class="col-lg-4 col-md-6">
                 <article class="destination-item" style="background-image: url(assets/images/img2.jpg);">
                    <div class="destination-content">
                       <div class="rating-start-wrap">
@@ -65,7 +67,7 @@
                       <p>Fusce hic augue velit wisi ips quibusdam pariatur, iusto.</p>
                    </div>
                 </article>
-             </div>
+             </div> --}}
           </div>
           <div class="section-btn-wrap text-center">
              <a href="destination.html" class="round-btn">More Destination</a>
