@@ -20,7 +20,7 @@
 
                 <div class="ms-auto">
                     <div class="btn-group">
-                        <a href="destinations-list" type="button" class="btn btn-warning"><i
+                        <a href="{{ route('destinations.list') }}" type="button" class="btn btn-warning"><i
                                 class='bx bx-list-check'></i>Destinations List</a>
 
                     </div>
@@ -37,7 +37,7 @@
 
                     <div class="card">
                         <div class="card-body">
-                            <form class="row g-3" method="POST" action="save-destinations"
+                            <form class="row g-3" method="POST" action="{{ route('destinations.save') }}"
                                 enctype="multipart/form-data">
                                 @csrf
                                 <div class="col-md-12">

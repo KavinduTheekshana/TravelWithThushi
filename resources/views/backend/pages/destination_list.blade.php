@@ -20,7 +20,7 @@
 
                 <div class="ms-auto">
                     <div class="btn-group">
-                        <a href="add-destinations" type="button" class="btn btn-primary"><i
+                        <a href="{{ route('destinations.add') }}" type="button" class="btn btn-primary"><i
                                 class='bx bx-message-square-add'></i> Add Destinations</a>
 
                     </div>
@@ -29,6 +29,7 @@
             <!--end breadcrumb-->
             <h6 class="mb-0 text-uppercase">Your all added Destinations</h6>
             <hr />
+            @include('backend.components.alert')
             <div class="card">
                 <div class="card-body">
                     <div class="table-responsive">
@@ -58,13 +59,19 @@
                                             @else
                                                 <span class="badge bg-danger">Deactive</span></a>
                                             @endif
+
+                                            @if ($destination->popular_status)
+                                                <span class="badge bg-purple">Popular</span></a>
+                                            @else
+                                                <span class="badge bg-secondary">Not Popular</span></a>
+                                            @endif
                                         </td>
                                         <td>
                                             @if ($destination->popular_status)
-                                                <a href="#" type="button"
-                                                    class="btn btn-purple px-2 py-1">Popular</a>
+                                                <a href="{{ route('destinations.notpopular', ['id' => $destination->id]) }}" type="button"
+                                                    class="btn btn-secondary px-2 py-1">Remove Popular</a>
                                             @else
-                                                <a href="#" type="button" class="btn btn-purple"> Make
+                                                <a href="{{ route('destinations.popular', ['id' => $destination->id]) }}" type="button" class="btn btn-purple"> Make
                                                     Popular</a>
                                             @endif
 
@@ -83,18 +90,20 @@
                                                         class="bx bxs-show me-0"></i></button>
 
                                                 @if ($destination->status)
-                                                    <button type="button" class="btn btn-danger"><i
-                                                            class="bx bxs-lock me-0"></i></button>
+                                                    <a href="{{ route('destinations.diactive', ['id' => $destination->id]) }}"
+                                                        type="button" class="btn btn-danger"><i
+                                                            class="bx bxs-lock me-0"></i></a>
                                                 @else
-                                                    <button type="button" class="btn btn-success"><i
-                                                            class="bx bxs-lock-open me-0"></i></button>
+                                                    <a href="{{ route('destinations.active', ['id' => $destination->id]) }}"
+                                                        type="button" class="btn btn-success"><i
+                                                            class="bx bxs-lock-open me-0"></i></a>
                                                 @endif
 
 
-                                                <button type="button" class="btn btn-primary"><i
-                                                        class='bx bxs-edit me-0'></i></button>
-                                                <button type="button" class="btn btn-warning"><i
-                                                        class='bx bxs-trash-alt me-0'></i></button>
+                                                <a href="{{ route('destinations.update_view', ['id' => $destination->id]) }}" type="button"
+                                                    class="btn btn-primary"><i class='bx bxs-edit me-0'></i></a>
+                                                <a href="{{ route('destinations.delete', ['id' => $destination->id]) }}" type="button"
+                                                    class="btn btn-warning"><i class='bx bxs-trash-alt me-0'></i></a>
                                             </div>
                                         </td>
                                     </tr>
@@ -122,7 +131,7 @@
         </div>
     </div>
     <!--end page wrapper -->
- 
+
 </div>
 <!--end wrapper-->
 
@@ -149,7 +158,7 @@
             var category = button.data('category');
             var image = button.data('image');
 
-            if (status==1) {
+            if (status == 1) {
                 $('#active-badge').html("Active");
                 $('#active-badge').addClass('badge bg-success');
             } else {
@@ -157,7 +166,7 @@
                 $('#active-badge').addClass('badge bg-danger');
             }
 
-            if (popular==1) {
+            if (popular == 1) {
                 $('#popular-badge').html("Popular");
                 $('#popular-badge').addClass('badge bg-purple');
             } else {

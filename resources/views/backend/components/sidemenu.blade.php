@@ -10,7 +10,7 @@
         <!--navigation-->
         <ul class="metismenu" id="menu">
             <li>
-                <a href="dashboard">
+                <a href="{{ route('dashboard') }}">
                     <div class="parent-icon"><i class='bx bx-home-alt'></i>
                     </div>
                     <div class="menu-title">Dashboard</div>
@@ -24,9 +24,9 @@
                     <div class="menu-title">Destinations</div>
                 </a>
                 <ul>
-                    <li> <a href="destinations-list"><i class='bx bx-radio-circle'></i>Destinations List</a>
+                    <li> <a href="{{ route('destinations.list') }}"><i class='bx bx-radio-circle'></i>Destinations List</a>
                     </li>
-                    <li> <a href="add-destinations"><i class='bx bx-radio-circle'></i>Add Destinations</a>
+                    <li> <a href="{{ route('destinations.add') }}"><i class='bx bx-radio-circle'></i>Add Destinations</a>
                     </li>
                 
                 </ul>

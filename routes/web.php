@@ -1,7 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\DestinationsController;
+use Illuminate\Support\Facades\Auth;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -23,10 +25,17 @@ Route::get('/', function () {
 Auth::routes(['register' => false]);
 
 // Dashboard 
-Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'index'])->name('dashboard');
+Route::get('/dashboard', [HomeController::class, 'index'])->name('dashboard');
 
 // Destinations 
-Route::get('/destinations-list', [App\Http\Controllers\DestinationsController::class, 'list'])->name('destinations-list');
-Route::get('/add-destinations', [App\Http\Controllers\DestinationsController::class, 'add'])->name('add-destinations');
-Route::post('/save-destinations', [App\Http\Controllers\DestinationsController::class, 'save'])->name('save-destinations');
+Route::get('/destinations-list', [DestinationsController::class, 'list'])->name('destinations.list');
+Route::get('/add-destinations', [DestinationsController::class, 'add'])->name('destinations.add');
+Route::post('/save-destinations', [DestinationsController::class, 'save'])->name('destinations.save');
+Route::get('/destinations-popular/{id}', [DestinationsController::class, 'popular'])->name('destinations.popular');
+Route::get('/destinations-notpopular/{id}', [DestinationsController::class, 'notpopular'])->name('destinations.notpopular');
+Route::get('/destinations-active/{id}', [DestinationsController::class, 'active'])->name('destinations.active');
+Route::get('/destinations-diactive/{id}', [DestinationsController::class, 'diactive'])->name('destinations.diactive');
+Route::get('/destinations-delete/{id}', [DestinationsController::class, 'delete'])->name('destinations.delete');
+Route::post('/destinations-update', [DestinationsController::class, 'update'])->name('destinations.update');
+Route::get('/destinations-update-view/{id}', [DestinationsController::class, 'update_view'])->name('destinations.update_view');
 
