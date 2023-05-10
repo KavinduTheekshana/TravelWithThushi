@@ -38,6 +38,12 @@ a {
 	background-color: #5d36a6;
 	color: #fff;
 }
+.model-image{
+	width: 50%;
+}
+.bg-purple{
+	background-color: #5d36a6;
+}
 .wrapper {
 	width: 100%;
 	position: relative

@@ -5,8 +5,8 @@
 	<!--wrapper-->
 	<div class="wrapper">
 	
-        @include('backend.sidemenu')
-        @include('backend.header')
+        @include('backend.components.sidemenu')
+        @include('backend.components.header')
 
 
 		
@@ -527,7 +527,7 @@
 		</div>
 		<!--end page wrapper -->
 		
-		@include('backend.footer')
+		@include('backend.components.footer')
 
 	</div>
 	<!--end wrapper-->

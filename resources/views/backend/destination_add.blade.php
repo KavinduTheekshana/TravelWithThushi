@@ -4,8 +4,8 @@
     <!--wrapper-->
     <div class="wrapper">
 
-        @include('backend.sidemenu')
-        @include('backend.header')
+        @include('backend.components.sidemenu')
+        @include('backend.components.header')
 
         <!--end header -->
         <!--start page wrapper -->
@@ -15,7 +15,7 @@
                 <div class="page-breadcrumb d-none d-sm-flex align-items-center mb-3">
                 @section('page_group', 'Destinations')
                 @section('page_name', 'Add Destinations')
-                @include('backend.breadcrumb')
+                @include('backend.components.breadcrumb')
 
 
                 <div class="ms-auto">
@@ -33,7 +33,7 @@
                     <h6 class="mb-0 text-uppercase">Add a New Destination to your list</h6>
                     <hr />
 
-                    @include('backend.alert')
+                    @include('backend.components.alert')
 
                     <div class="card">
                         <div class="card-body">
@@ -122,18 +122,11 @@
         </div>
     </div>
     <!--end page wrapper -->
-    <!--start overlay-->
-    <div class="overlay toggle-icon"></div>
-    <!--end overlay-->
-    <!--Start Back To Top Button--> <a href="javaScript:;" class="back-to-top"><i class='bx bxs-up-arrow-alt'></i></a>
-    <!--End Back To Top Button-->
-    <footer class="page-footer">
-        <p class="mb-0">Copyright © 2021. All right reserved.</p>
-    </footer>
+
 </div>
 <!--end wrapper-->
 
-@include('backend.footer')
+@include('backend.components.footer')
 @endsection
 
 @push('scripts')

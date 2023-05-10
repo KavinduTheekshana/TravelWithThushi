@@ -22,6 +22,7 @@ Route::get('/', function () {
 // Backend Routs 
 Auth::routes(['register' => false]);
 
+// Dashboard 
 Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'index'])->name('dashboard');
 
 // Destinations 
