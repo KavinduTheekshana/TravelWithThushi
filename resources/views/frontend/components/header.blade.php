@@ -20,11 +20,6 @@
                 </h1>
              </div>
              <div class="header-icon text-right">
-                <div class="header-search-icon d-inline-block">
-                   <a href="#">
-                      <i aria-hidden="true" class="fas fa-search"></i>
-                   </a>
-                </div>
                 <div class="offcanvas-menu d-inline-block">
                    <a href="#">
                       <i aria-hidden="true" class="icon icon-burger-menu"></i>
@@ -59,14 +54,14 @@
              <div class="navigation-container d-none d-lg-block">
                 <nav id="navigation" class="navigation">
                    <ul>
-                      <li class="menu-active">
+                      <li class="{{ request()->is('/') ? 'menu-active' : '' }}">
                          <a href="{{ route('/') }}">Home</a>
                       </li>
                       <li>
                          <a href="about.html">about us</a>
                       </li>
-                      <li>
-                         <a href="destination.html">destination</a>
+                      <li class="{{ Request::segment(1) === 'destinations' ? 'menu-active' : null }}">
+                         <a href="{{ route('destinations.all') }}">destination</a>
                       </li>
                       <li class="menu-item-has-children">
                          <a href="index.html">packages</a>

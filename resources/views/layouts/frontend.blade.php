@@ -27,6 +27,9 @@
       {{-- swiperjs  --}}
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
 
+      {{-- Anim Trap  --}}
+      <link rel="stylesheet" href="{{ asset('frontend/assets/plugin/animtrap/css/animtrap.min.css')}}">
+
       <title>Seylan Odyssey | I help you to enjoy your journey</title>
       @vite('resources/js/app.js')
    </head>
@@ -55,8 +58,16 @@
           <script src="{{ asset('frontend/assets/vendors/fancybox/dist/jquery.fancybox.min.js')}}"></script>
           <script src="{{ asset('frontend/assets/vendors/slick-nav/jquery.slicknav.js')}}"></script>
           <script src="{{ asset('frontend/assets/js/custom.min.js')}}"></script>
+          <script src="{{ asset('frontend/assets/plugin/animtrap/js/anim-effect.js')}}"></script>
+          <script src="{{ asset('frontend/assets/plugin/animtrap/js/anim-scroll.js')}}"></script>
           <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 
           
+          <script>
+            ANIMSCROLL.init({
+                easing: 'ease-in-out-sine'
+            });
+        </script>
+        
        </body>
     </html>

@@ -14,9 +14,15 @@ class HomeController extends Controller
         return view('frontend.home', ['destinations' => $destinations]);
     }
 
-    public function single($slug)
+    public function single_destination($slug)
     {
         $destinations = Destinations::where('slug',$slug)->first();
         return view('frontend.destinations.destination', ['destinations' => $destinations]);
+    }
+
+    public function all_destinations()
+    {
+        $destinations = FacadesDB::table('destinations')->where('status', 1)->whereNull('deleted_at')->get();
+        return view('frontend.destinations.destinations', ['destinations' => $destinations]);
     }
 }

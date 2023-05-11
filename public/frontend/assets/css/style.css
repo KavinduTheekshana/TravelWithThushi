@@ -1036,6 +1036,12 @@ input[type=submit]:focus {
   background-color: #3A78C9;
 }
 
+.dark-bg {
+  background-color: #121214;
+}
+.dark-bg  .section-title{
+  color: #fff;
+}
 .primary-color {
   color: #3A78C9;
 }

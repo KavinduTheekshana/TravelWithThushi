@@ -13,6 +13,7 @@
     <main id="content" class="site-main">
      
       @include('frontend.homepage.banner')
+      @include('frontend.homepage.sub_banner')
       @include('frontend.homepage.popular')
       @include('frontend.homepage.package')
 
@@ -465,7 +466,6 @@
 
     @include('frontend.components.footer')
     @include('frontend.components.top')
-    @include('frontend.components.search')
     @include('frontend.components.owner')
 
 
