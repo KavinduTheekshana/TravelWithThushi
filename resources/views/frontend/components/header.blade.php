@@ -60,7 +60,7 @@
                 <nav id="navigation" class="navigation">
                    <ul>
                       <li class="menu-active">
-                         <a href="index.html">Home</a>
+                         <a href="{{ route('/') }}">Home</a>
                       </li>
                       <li>
                          <a href="about.html">about us</a>

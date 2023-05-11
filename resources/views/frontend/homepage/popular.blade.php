@@ -22,52 +22,16 @@
                          </div>
                       </div>
                       <span class="cat-link">
-                         <a href="destination.html">{{$destination->location}}</a>
+                         <a href="{{ route('destinations.single', ['slug' => $destination->slug]) }}">{{$destination->location}}</a>
                       </span>
                       <h3>
-                         <a href="package-detail.html">{{$destination->title}}</a>
+                         <a href="{{ route('destinations.single', ['slug' => $destination->slug]) }}">{{$destination->title}}</a>
                       </h3>
                       <p>{{ Str::limit(str_replace('&nbsp;', ' ', strip_tags($destination->description)), 50, '... read more') }}</p>
                    </div>
                 </article>
              </div>
              @endforeach
-             {{-- <div class="col-lg-4 col-md-6">
-                <article class="destination-item" style="background-image: url(assets/images/img2.jpg);">
-                   <div class="destination-content">
-                      <div class="rating-start-wrap">
-                         <div class="rating-start">
-                            <span style="width: 100%"></span>
-                         </div>
-                      </div>
-                      <span class="cat-link">
-                         <a href="destination.html">Dubai</a>
-                      </span>
-                      <h3>
-                         <a href="package-detail.html">BURJ KHALIFA</a>
-                      </h3>
-                      <p>Fusce hic augue velit wisi ips quibusdam pariatur, iusto.</p>
-                   </div>
-                </article>
-             </div>
-             <div class="col-lg-4 col-md-6">
-                <article class="destination-item" style="background-image: url(assets/images/img3.jpg);">
-                   <div class="destination-content">
-                      <div class="rating-start-wrap">
-                         <div class="rating-start">
-                            <span style="width: 100%"></span>
-                         </div>
-                      </div>
-                      <span class="cat-link">
-                         <a href="destination.html">Japan</a>
-                      </span>
-                      <h3>
-                         <a href="package-detail.html">KYOTO TEMPLE</a>
-                      </h3>
-                      <p>Fusce hic augue velit wisi ips quibusdam pariatur, iusto.</p>
-                   </div>
-                </article>
-             </div> --}}
           </div>
           <div class="section-btn-wrap text-center">
              <a href="destination.html" class="round-btn">More Destination</a>

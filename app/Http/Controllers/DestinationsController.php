@@ -13,7 +13,6 @@ class DestinationsController extends Controller
         $this->middleware('auth');
     }
 
-
     public function list()
     {
         $destinations = FacadesDB::table('destinations')->whereNull('deleted_at')->get();

@@ -19,9 +19,7 @@ use Illuminate\Support\Facades\Auth;
 
 // Frontend Routes 
 Route::get('/', [HomeController::class, 'index'])->name('/');
-// Route::get('/', function () {
-//     return view('frontend/home');
-// });
+Route::get('/destination/{slug}', [HomeController::class, 'single'])->name('destinations.single');
 
 // Auth Routs 
 Auth::routes(['register' => false]);
@@ -29,7 +27,7 @@ Auth::routes(['register' => false]);
 // Dashboard 
 Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
-// Destinations 
+// Destinations Back End
 Route::get('/destinations-list', [DestinationsController::class, 'list'])->name('destinations.list');
 Route::get('/add-destinations', [DestinationsController::class, 'add'])->name('destinations.add');
 Route::post('/save-destinations', [DestinationsController::class, 'save'])->name('destinations.save');
