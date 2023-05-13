@@ -18,6 +18,16 @@ body {
 a {
 	text-decoration: none
 }
+.margin-btn{
+	margin-left: 20px !important;
+	margin-right: 20px !important;
+}
+.background-txt{
+	background-color: #0eb018;
+}
+.txt-blue{
+	color: #037de2;
+}
 .placeholder-image{
 	width: 300px;
 }

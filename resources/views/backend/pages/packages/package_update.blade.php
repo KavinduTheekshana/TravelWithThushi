@@ -13,15 +13,15 @@
             <div class="page-content">
                 <!--breadcrumb-->
                 <div class="page-breadcrumb d-none d-sm-flex align-items-center mb-3">
-                @section('page_group', 'Destinations')
-                @section('page_name', 'Update Destinations')
+                @section('page_group', 'Packages')
+                @section('page_name', 'Update Package')
                 @include('backend.components.breadcrumb')
 
 
                 <div class="ms-auto">
                     <div class="btn-group">
-                        <a href="destinations-list" type="button" class="btn btn-warning"><i
-                                class='bx bx-list-check'></i>Destinations List</a>
+                        <a href="{{ route('package.list') }}" type="button" class="btn btn-warning"><i
+                                class='bx bx-list-check'></i>Package List</a>
 
                     </div>
                 </div>
@@ -30,53 +30,47 @@
 
             <div class="row">
                 <div class="col-xl-9 mx-auto">
-                    <h6 class="mb-0 text-uppercase">Update Your Existing Destination Details</h6>
+                    <h6 class="mb-0 text-uppercase">Update Your Existing Package Details</h6>
                     <hr />
 
                     @include('backend.components.alert')
 
                     <div class="card">
                         <div class="card-body">
-                            <form class="row g-3" method="POST" action="{{ route('destinations.update') }}"
+                            <form class="row g-3" method="POST" action="{{ route('package.update') }}"
                                 enctype="multipart/form-data">
                                 @csrf
                                 <div class="col-md-12">
-                                    <input type="text" name="id" value="{{ $destinations->id }}" hidden>
+                                    <input type="text" name="id" value="{{ $package->id }}" hidden>
                                     <div class="form-row">
                                         <label for="input1" class="form-label">Title</label>
                                         <input type="text" class="form-control" id="myTextbox" name="title"
-                                            required placeholder="Destination Title" value="{{ $destinations->title }}">
+                                            required placeholder="Package Title" value="{{ $package->title }}">
                                     </div>
 
-                                    {{-- <div class="form-row">
-                                        <label for="input1" class="form-label">Slag</label> --}}
+
                                     <input hidden type="text" class="form-control" id="mySlugbox" name="slug"
-                                        required placeholder="Destination Title Slag" readonly value="{{ $destinations->slug }}">
-                                    {{-- </div> --}}
+                                        required placeholder="Package Title Slag" readonly value="{{ $package->slug }}">
 
                                     <div class="form-row">
                                         <label for="input1" class="form-label">Location</label>
                                         <input type="text" class="form-control" name="location" required
-                                            placeholder="Location" value="{{ $destinations->location }}">
+                                            placeholder="Location" value="{{$package->location }}">
                                     </div>
 
                                     <div class="form-row">
-                                        <label for="input7" class="form-label">Category</label>
-                                        <select id="input7" class="form-select" name="category" required>
-                                            <option selected value="{{ $destinations->category }}">{{ $destinations->category }}</option>
-                                            <option value="Adventure">Adventure</option>
-                                            <option value="Beach and Coastal">Beach and Coastal</option>
-                                            <option value="City Breaks">City Breaks</option>
-                                            <option value="Cultural and Heritage">Cultural and Heritage</option>
-                                            <option value="Educational">Educational</option>
-                                            <option value="Food and Wine">Food and Wine</option>
-                                            <option value="Luxury">Luxury</option>
-                                            <option value="Nature and Wildlife">Nature and Wildlife</option>
-                                            <option value="Road Trips">Road Trips</option>
-                                            <option value="Solo Travel">Solo Travel</option>
-                                            <option value="Wellness and Spa">Wellness and Spa</option>
-                                        </select>
+                                        <label for="input1" class="form-label">Days</label>
+                                        <input type="number" class="form-control" name="days" required
+                                            placeholder="Days" value="{{ $package->days }}">
                                     </div>
+
+                                    <div class="form-row">
+                                        <label for="input1" class="form-label">Nights</label>
+                                        <input type="number" class="form-control" name="nights" required
+                                            placeholder="Nights" value="{{ $package->nights }}">
+                                    </div>
+
+
 
                                     <div class="form-row">
                                         <label for="input1" class="form-label">Cover Image</label>
@@ -86,14 +80,14 @@
                                                 id="inputGroupFile01" onchange="readURL(this);">
                                         </div>
 
-                                        <img id="blah" src="{{ asset($destinations->image) }}"
+                                        <img id="blah" src="{{ asset($package->image) }}"
                                             class="placeholder-image" alt="your image" />
                                     </div>
 
                                     <div class="form-row">
                                         <label for="input1" class="form-label">Description</label>
 
-                                        <textarea id="myeditorinstance" name="description" required>{{ $destinations->description }}</textarea>
+                                        <textarea id="myeditorinstance" name="description" required>{{ $package->description }}</textarea>
                                     </div>
 
                                     <div class="form-row">
@@ -151,7 +145,8 @@
     $(document).ready(function() {
         $('#myTextbox').on('input', function() {
             var value = $(this).val();
-            var slug = value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+            var slug = value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '') + "-" +
+                Date.now();
             $('#mySlugbox').val(slug);
         });
     });

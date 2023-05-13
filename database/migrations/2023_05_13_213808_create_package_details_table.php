@@ -13,12 +13,10 @@ return new class extends Migration
     {
         Schema::create('package_details', function (Blueprint $table) {
             $table->id();
+            $table->string('package_id');
             $table->string('day');
             $table->string('title');
-            $table->string('slug');
             $table->boolean('status')->default(1);
-            $table->boolean('popular_status')->default(0);
-            $table->string('days');
             $table->string('location');
             $table->string('image');
             $table->longText('description');
@@ -32,7 +30,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-       
         Schema::dropIfExists('package_details');
     }
 };

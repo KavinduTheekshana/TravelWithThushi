@@ -10,9 +10,9 @@
                   <img src="{{ asset('backend/assets/images/default.jpg') }}" class="model-image" />
                   <br>
                   <br>
-                  <span id="active-badge" class="badge bg-success">Active</span>
-                  <span id="popular-badge" class="badge bg-purple">Popular</span>
-                  <span id="category-badge" class="badge bg-primary">Category</span>
+                  <span id="active-badge" class="badge bg-success"></span>
+                  <span id="popular-badge" class="badge bg-purple"></span>
+                  <span id="category-badge" class="badge bg-primary"></span>
                   <br>
                   <br>
            

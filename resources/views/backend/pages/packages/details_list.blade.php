@@ -14,20 +14,21 @@
                 <!--breadcrumb-->
                 <div class="page-breadcrumb d-none d-sm-flex align-items-center mb-3">
                 @section('page_group', 'Packages')
-                @section('page_name', 'Package List')
+                @section('page_name', 'Package Details List')
                 @include('backend.components.breadcrumb')
 
 
                 <div class="ms-auto">
                     <div class="btn-group">
-                        <a href="{{ route('package.add') }}" type="button" class="btn btn-primary"><i
-                                class='bx bx-message-square-add'></i> Add Package</a>
+                        <a href="{{ route('package.add.details', ['id' => $package->id]) }}" type="button"
+                            class="btn btn-primary"><i class='bx bx-message-square-add'></i> Add Package Details</a>
 
                     </div>
                 </div>
             </div>
             <!--end breadcrumb-->
-            <h6 class="mb-0 text-uppercase">Your all added Packages</h6>
+            <h6 class="mb-0 text-uppercase">all added Package Details about <span class="txt-blue">
+                    "{{ $package->title }}"</span> </h6>
             <hr />
             @include('backend.components.alert')
             <div class="card">
@@ -37,84 +38,58 @@
                             <thead>
                                 <tr>
                                     <th>Image</th>
+                                    <th>Day</th>
                                     <th>Title</th>
-                                    <th>Days/Nights</th>
+                                    <th>Location</th>
                                     <th>Status</th>
-                                    <th>Popular</th>
                                     <th>Actions</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach ($packages as $package)
+                                @foreach ($package_details as $details)
                                     <tr>
-                                        <td><img src="{{ asset($package->image) }}" class="table-image-holder"
+                                        <td><img src="{{ asset($details->image) }}" class="table-image-holder"
                                                 alt="image" /> </td>
-                                        <td>{{ $package->title }}</td>
-
-                                        <td>{{ $package->days }}D/{{ $package->nights }}N</td>
-            
+                                        <td>Day {{ $details->day }}</td>
+                                        <td>{{ $details->title }}</td>
+                                        <td>{{ $details->location }}</td>
                                         <td>
-                                            @if ($package->status)
+                                            @if ($details->status)
                                                 <span class="badge bg-success">Active</span></a>
                                             @else
                                                 <span class="badge bg-danger">Deactive</span></a>
                                             @endif
-
-                                            @if ($package->popular_status)
-                                                <span class="badge bg-purple">Popular</span></a>
-                                            @else
-                                                <span class="badge bg-secondary">Not Popular</span></a>
-                                            @endif
                                         </td>
                                         <td>
-                                            @if ($package->popular_status)
-                                                <a href="{{ route('package.notpopular', ['id' => $package->id]) }}" type="button"
-                                                    class="btn btn-secondary px-2 py-1">Remove Popular</a>
-                                            @else
-                                                <a href="{{ route('package.popular', ['id' => $package->id]) }}" type="button" class="btn btn-purple"> Make
-                                                    Popular</a>
-                                            @endif
-
-                                        </td>
-                                        <td>
-                                            
                                             <div class=" table-icon-group">
-
-                                                <a href="{{ route('destinations.update_view', ['id' => $package->id]) }}" type="button"
-                                                    class="btn btn-primary"><i class='bx bx-align-middle me-0 margin-btn'></i></a>
-
-
                                                 <button type="button" class="btn btn-dark" data-bs-toggle="modal"
                                                     data-bs-target="#exampleLargeModal"
-                                                    data-title="{{ $package->title }}"
-                                                    data-location="{{ $package->location }}"
-                                                    data-days="{{ $package->days }}"
-                                                    data-nights="{{ $package->nights }}"
-                                                    data-description="{{ $package->description }}"
-                                                    data-status="{{ $package->status }}"
-                             
-                                                    data-popular="{{ $package->popular_status }}"
-                                                    data-image="{{ $package->image }}"><i
+                                                    data-title="{{ $details->title }}"
+                                                    data-location="{{ $details->location }}"
+                                                    data-days="{{ $details->day }}"
+                                                    data-description="{{ $details->description }}"
+                                                    data-status="{{ $details->status }}"
+                                              
+                                                    data-image="{{ asset($details->image) }}"><i
                                                         class="bx bxs-show me-0"></i></button>
 
-                                                @if ($package->status)
-                                                    <a href="{{ route('package.diactive', ['id' => $package->id]) }}"
+                                                @if ($details->status)
+                                                    <a href="{{ route('package.diactive.details', ['id' => $details->id]) }}"
                                                         type="button" class="btn btn-danger"><i
                                                             class="bx bxs-lock me-0"></i></a>
                                                 @else
-                                                    <a href="{{ route('package.active', ['id' => $package->id]) }}"
+                                                    <a href="{{ route('package.active.details', ['id' => $details->id]) }}"
                                                         type="button" class="btn btn-success"><i
                                                             class="bx bxs-lock-open me-0"></i></a>
                                                 @endif
 
+                                                <a href="{{ route('package.update_view.details', ['id' => $details->id]) }}"
+                                                    type="button" class="btn btn-primary"><i
+                                                        class='bx bxs-edit me-0'></i></a>
+                                                <a href="{{ route('package.delete.details', ['id' => $details->id]) }}"
+                                                    type="button" class="btn btn-warning"><i
+                                                        class='bx bxs-trash-alt me-0'></i></a>
 
-                                                <a href="{{ route('package.update_view', ['id' => $package->id]) }}" type="button"
-                                                    class="btn btn-primary"><i class='bx bxs-edit me-0'></i></a>
-                                                <a href="{{ route('package.delete', ['id' => $package->id]) }}" type="button"
-                                                    class="btn btn-warning"><i class='bx bxs-trash-alt me-0'></i></a>
-
-                                                    <a href="{{ route('package.details.list', ['id' => $package->id]) }}" type="button"
-                                                        class="btn btn-success"><i class='bx bx-right-arrow-alt me-0 margin-btn'></i></i></a>
                                             </div>
                                         </td>
                                     </tr>
@@ -125,9 +100,8 @@
                                 <tr>
                                     <th>Image</th>
                                     <th>Title</th>
-                                    <th>Days/Nights</th>
+                                    <th>Location</th>
                                     <th>Status</th>
-                                    <th>Popular</th>
                                     <th>Actions</th>
                                 </tr>
                             </tfoot>
@@ -164,8 +138,6 @@
             var location = button.data('location');
             var status = button.data('status');
             var description = button.data('description');
-            var popular = button.data('popular');
-            var category = button.data('category');
             var image = button.data('image');
 
             if (status == 1) {
@@ -176,14 +148,8 @@
                 $('#active-badge').addClass('badge bg-danger');
             }
 
-            if (popular == 1) {
-                $('#popular-badge').html("Popular");
-                $('#popular-badge').addClass('badge bg-purple');
-            } else {
-                $('#popular-badge').html("Not Popular");
-                $('#popular-badge').addClass('badge bg-secondary');
-            }
- 
+          
+    
             $('#modal-title').html(title);
             $('#modal-location').html(location);
             $('#modalBody').html(description);
