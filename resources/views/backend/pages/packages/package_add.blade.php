@@ -13,15 +13,15 @@
             <div class="page-content">
                 <!--breadcrumb-->
                 <div class="page-breadcrumb d-none d-sm-flex align-items-center mb-3">
-                @section('page_group', 'Destinations')
-                @section('page_name', 'Add Destinations')
+                @section('page_group', 'Packages')
+                @section('page_name', 'Add Package')
                 @include('backend.components.breadcrumb')
 
 
                 <div class="ms-auto">
                     <div class="btn-group">
-                        <a href="{{ route('destinations.list') }}" type="button" class="btn btn-warning"><i
-                                class='bx bx-list-check'></i>Destinations List</a>
+                        <a href="{{ route('package.list') }}" type="button" class="btn btn-warning"><i
+                                class='bx bx-list-check'></i>Package List</a>
 
                     </div>
                 </div>
@@ -30,28 +30,26 @@
 
             <div class="row">
                 <div class="col-xl-9 mx-auto">
-                    <h6 class="mb-0 text-uppercase">Add a New Destination to your list</h6>
+                    <h6 class="mb-0 text-uppercase">Add a New Package to your list</h6>
                     <hr />
 
                     @include('backend.components.alert')
 
                     <div class="card">
                         <div class="card-body">
-                            <form class="row g-3" method="POST" action="{{ route('destinations.save') }}"
+                            <form class="row g-3" method="POST" action="{{ route('package.save') }}"
                                 enctype="multipart/form-data">
                                 @csrf
                                 <div class="col-md-12">
                                     <div class="form-row">
                                         <label for="input1" class="form-label">Title</label>
-                                        <input type="text" class="form-control" id="myTextbox" name="title" required
-                                            placeholder="Destination Title">
+                                        <input type="text" class="form-control" id="myTextbox" name="title"
+                                            required placeholder="Package Title">
                                     </div>
 
-                                    {{-- <div class="form-row">
-                                        <label for="input1" class="form-label">Slag</label> --}}
-                                        <input hidden type="text" class="form-control" id="mySlugbox" name="slug" required
-                                            placeholder="Destination Title Slag" readonly>
-                                    {{-- </div> --}}
+
+                                    <input hidden type="text" class="form-control" id="mySlugbox" name="slug"
+                                        required placeholder="Package Title Slag" readonly>
 
                                     <div class="form-row">
                                         <label for="input1" class="form-label">Location</label>
@@ -60,22 +58,18 @@
                                     </div>
 
                                     <div class="form-row">
-                                        <label for="input7" class="form-label">Category</label>
-                                        <select id="input7" class="form-select" name="category" required>
-                                            <option selected>Choose...</option>
-                                            <option value="Adventure">Adventure</option>
-                                            <option value="Beach and Coastal">Beach and Coastal</option>
-                                            <option value="City Breaks">City Breaks</option>
-                                            <option value="Cultural and Heritage">Cultural and Heritage</option>
-                                            <option value="Educational">Educational</option>
-                                            <option value="Food and Wine">Food and Wine</option>
-                                            <option value="Luxury">Luxury</option>
-                                            <option value="Nature and Wildlife">Nature and Wildlife</option>
-                                            <option value="Road Trips">Road Trips</option>
-                                            <option value="Solo Travel">Solo Travel</option>
-                                            <option value="Wellness and Spa">Wellness and Spa</option>
-                                        </select>
+                                        <label for="input1" class="form-label">Days</label>
+                                        <input type="number" class="form-control" name="days" required
+                                            placeholder="Days">
                                     </div>
+
+                                    <div class="form-row">
+                                        <label for="input1" class="form-label">Nights</label>
+                                        <input type="number" class="form-control" name="nights" required
+                                            placeholder="Nights">
+                                    </div>
+
+
 
                                     <div class="form-row">
                                         <label for="input1" class="form-label">Cover Image</label>
@@ -85,20 +79,14 @@
                                                 id="inputGroupFile01" onchange="readURL(this);">
                                         </div>
 
-                                        <img id="blah"
-                                            src="{{ asset('backend/assets/images/default.jpg') }}"
+                                        <img id="blah" src="{{ asset('backend/assets/images/default.jpg') }}"
                                             class="placeholder-image" alt="your image" />
                                     </div>
 
                                     <div class="form-row">
                                         <label for="input1" class="form-label">Description</label>
 
-                                        <textarea id="myeditorinstance" name="description" required>Hello, World!</textarea>
-
-
-                                        {{-- <div class="mt-0 pt-5 pb-5" id="editor">
-                                            <input type="hidden" name="description" />
-                                        </div> --}}
+                                        <textarea id="myeditorinstance" name="description" required>Add Your Text Here</textarea>
                                     </div>
 
                                     <div class="form-row">
@@ -133,10 +121,10 @@
 <script>
     // editer 
     tinymce.init({
-    selector: 'textarea#myeditorinstance', // Replace this CSS selector to match the placeholder element for TinyMCE
-    plugins: 'code table lists',
-    toolbar: 'undo redo | blocks | bold italic | alignleft aligncenter alignright | indent outdent | bullist numlist | table'
-  });
+        selector: 'textarea#myeditorinstance', // Replace this CSS selector to match the placeholder element for TinyMCE
+        plugins: 'code table lists',
+        toolbar: 'undo redo | blocks | bold italic | alignleft aligncenter alignright | indent outdent | bullist numlist | table'
+    });
 
     // image display
     function readURL(input) {
@@ -156,14 +144,10 @@
     $(document).ready(function() {
         $('#myTextbox').on('input', function() {
             var value = $(this).val();
-            var slug = value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+            var slug = value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '') + "-" +
+                Date.now();
             $('#mySlugbox').val(slug);
         });
     });
-
-
-
 </script>
-
-
 @endpush

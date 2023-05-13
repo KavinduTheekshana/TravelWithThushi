@@ -9,6 +9,9 @@
          </div>
         <!--navigation-->
         <ul class="metismenu" id="menu">
+
+            <li class="menu-label">Menu</li>
+
             <li>
                 <a href="{{ route('dashboard') }}">
                     <div class="parent-icon"><i class='bx bx-home-alt'></i>
@@ -31,6 +34,23 @@
                 
                 </ul>
             </li>
+
+            <li>
+                <a href="javascript:;" class="has-arrow">
+                    <div class="parent-icon"><i class='bx bx-package'></i>
+                    </div>
+                    <div class="menu-title">Packages</div>
+                </a>
+                <ul>
+                    <li> <a href="{{ route('package.list') }}"><i class='bx bx-radio-circle'></i>Packages List</a>
+                    </li>
+                    <li> <a href="{{ route('package.add') }}"><i class='bx bx-radio-circle'></i>Add Packages</a>
+                    </li>
+                
+                </ul>
+            </li>
+
+
             <li class="menu-label">UI Elements</li>
             <li>
                 <a href="widgets.html">

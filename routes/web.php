@@ -4,6 +4,7 @@ use App\Http\Controllers\DashboardController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\DestinationsController;
+use App\Http\Controllers\PackagesController;
 use Illuminate\Support\Facades\Auth;
 /*
 |--------------------------------------------------------------------------
@@ -40,3 +41,7 @@ Route::get('/destinations-delete/{id}', [DestinationsController::class, 'delete'
 Route::post('/destinations-update', [DestinationsController::class, 'update'])->name('destinations.update');
 Route::get('/destinations-update-view/{id}', [DestinationsController::class, 'update_view'])->name('destinations.update_view');
 
+// Destinations Back End
+Route::get('/package-list', [PackagesController::class, 'list'])->name('package.list');
+Route::get('/add-package', [PackagesController::class, 'add'])->name('package.add');
+Route::post('/save-package', [PackagesController::class, 'save'])->name('package.save');

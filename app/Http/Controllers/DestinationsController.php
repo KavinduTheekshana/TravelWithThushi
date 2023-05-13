@@ -16,12 +16,12 @@ class DestinationsController extends Controller
     public function list()
     {
         $destinations = FacadesDB::table('destinations')->whereNull('deleted_at')->get();
-        return view('backend.pages.destination_list', ['destinations' => $destinations]);
+        return view('backend.pages.destinations.destination_list', ['destinations' => $destinations]);
     }
 
     public function add()
     {
-        return view('backend.pages.destination_add');
+        return view('backend.pages.destinations.destination_add');
     }
     public function active($id)
     {
@@ -60,7 +60,7 @@ class DestinationsController extends Controller
     public function update_view($id)
     {
         $destinations = Destinations::find($id);
-        return view('backend.pages.destination_update', ['destinations' => $destinations]);
+        return view('backend.pages.destinations.destination_update', ['destinations' => $destinations]);
     }
 
     public function save(Request $request)
