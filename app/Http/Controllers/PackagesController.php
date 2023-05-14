@@ -34,6 +34,8 @@ class PackagesController extends Controller
             'days' => ['required', 'numeric', 'max:255'],
             'nights' => ['required', 'numeric', 'max:255'],
             'image' => ['required'],
+            'peoples' => ['required'],
+            'price' => ['required'],
             'description' => ['required'],
         ]);
 
@@ -43,6 +45,8 @@ class PackagesController extends Controller
         $package->location = $request->input('location');
         $package->days = $request->input('days');
         $package->nights = $request->input('nights');
+        $package->peoples = $request->input('peoples');
+        $package->price = $request->input('price');
         $package->description = $request->input('description');
 
         if ($request->hasFile('image')) {
@@ -55,7 +59,7 @@ class PackagesController extends Controller
             $package->image = 'uploads/destinations/default.jpg';
         }
         $package->save();
-        return redirect('add-package')->with('status', 'New package Added Sucessfully');
+        return redirect('package-list')->with('status', 'New package Added Sucessfully');
     }
     public function popular($id)
     {
@@ -104,6 +108,8 @@ class PackagesController extends Controller
             'location' => ['required', 'string', 'max:255'],
             'days' => ['required', 'numeric', 'max:255'],
             'nights' => ['required', 'numeric', 'max:255'],
+            'peoples' => ['required'],
+            'price' => ['required'],
             'description' => ['required'],
         ]);
 
@@ -114,6 +120,8 @@ class PackagesController extends Controller
         $package->location = $request->input('location');
         $package->days = $request->input('days');
         $package->nights = $request->input('nights');
+        $package->peoples = $request->input('peoples');
+        $package->price = $request->input('price');
         $package->description = $request->input('description');
 
         $single_package = Packages::find($package_id);
@@ -135,6 +143,8 @@ class PackagesController extends Controller
             'location' => $package->location,
             'days' => $package->days,
             'nights' => $package->nights,
+            'peoples' => $package->peoples,
+            'price' => $package->price,
             'description' => $package->description,
             'image' => $package->image,
         );

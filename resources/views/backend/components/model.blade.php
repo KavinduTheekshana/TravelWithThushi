@@ -13,6 +13,8 @@
                   <span id="active-badge" class="badge bg-success"></span>
                   <span id="popular-badge" class="badge bg-purple"></span>
                   <span id="category-badge" class="badge bg-primary"></span>
+                  <span id="price-badge" class="badge bg-dark"></span>
+                  <span id="peoples-badge" class="badge bg-warning"></span>
                   <br>
                   <br>
            

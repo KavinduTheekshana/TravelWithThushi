@@ -49,7 +49,7 @@
                                     <tr>
                                         <td><img src="{{ asset($package->image) }}" class="table-image-holder"
                                                 alt="image" /> </td>
-                                        <td>{{ $package->title }}</td>
+                                        <td>{{ Str::limit(strip_tags($package->title), 30, '...') }}</td>
 
                                         <td>{{ $package->days }}D/{{ $package->nights }}N</td>
             
@@ -88,10 +88,13 @@
                                                     data-bs-target="#exampleLargeModal"
                                                     data-title="{{ $package->title }}"
                                                     data-location="{{ $package->location }}"
-                                                    data-days="{{ $package->days }}"
+                     
                                                     data-nights="{{ $package->nights }}"
                                                     data-description="{{ $package->description }}"
                                                     data-status="{{ $package->status }}"
+                                                    data-days="{{ $package->days }}D/{{ $package->nights }}N"
+                                                    data-peoples="{{ $package->peoples }} Peoples"
+                                                    data-price="{{ $package->price }} USD"
                              
                                                     data-popular="{{ $package->popular_status }}"
                                                     data-image="{{ $package->image }}"><i
@@ -163,6 +166,9 @@
             var title = button.data('title');
             var location = button.data('location');
             var status = button.data('status');
+            var days = button.data('days');
+            var peoples = button.data('peoples');
+            var price = button.data('price');
             var description = button.data('description');
             var popular = button.data('popular');
             var category = button.data('category');
@@ -186,6 +192,9 @@
  
             $('#modal-title').html(title);
             $('#modal-location').html(location);
+            $('#category-badge').html(days);
+            $('#price-badge').html(peoples);
+            $('#peoples-badge').html(price);
             $('#modalBody').html(description);
             $('.model-image').attr('src', image);
         });
