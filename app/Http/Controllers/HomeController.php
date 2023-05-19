@@ -26,4 +26,10 @@ class HomeController extends Controller
         $destinations = DB::table('destinations')->where('status', 1)->whereNull('deleted_at')->get();
         return view('frontend.destinations.destinations', ['destinations' => $destinations]);
     }
+
+    public function all_packages()
+    {
+        $packages = DB::table('packages')->where('status', 1)->whereNull('deleted_at')->get();
+        return view('frontend.packages.packages', ['packages' => $packages]);
+    }
 }

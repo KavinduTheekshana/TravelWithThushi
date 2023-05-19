@@ -63,29 +63,12 @@
                       <li class="{{ Request::segment(1) === 'destinations' ? 'menu-active' : null }}">
                          <a href="{{ route('destinations.all') }}">destination</a>
                       </li>
-                      <li class="menu-item-has-children">
-                         <a href="index.html">packages</a>
-                         <ul>
-                            <li>
-                               <a href="package.html">Packages</a>
-                            </li>
-                            <li>
-                               <a href="package-offer.html">Package offer</a>
-                            </li>
-                            <li>
-                               <a href="package-detail.html">Package detail</a>
-                            </li>
-                            <li>
-                               <a href="cart.html">Cart page</a>
-                            </li>
-                            <li>
-                               <a href="booking.html">Booking page</a>
-                            </li>
-                            <li>
-                               <a href="confirmation.html">Confirmation</a>
-                            </li>
-                         </ul>
-                      </li>
+
+                      <li class="{{ Request::segment(1) === 'packages' ? 'menu-active' : null }}">
+                        <a href="{{ route('packages.all') }}">packages</a>
+                     </li>
+
+                  
                       <li class="menu-item-has-children">
                          <a href="index.html">Pages</a>
                          <ul>

@@ -15,8 +15,8 @@
       
          @include('frontend.packages.single')
     
-          <div class="section-btn-wrap text-center">
-             <a href="package.html" class="round-btn">VIEW ALL PACKAGES</a>
+          <div class="section-btn-wrap text-center" data-animscroll="fade-up" data-animscroll-delay="100">
+             <a href="{{ route('packages.all') }}" class="round-btn">VIEW ALL PACKAGES</a>
           </div>
        </div>
     </div>

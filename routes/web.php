@@ -23,6 +23,7 @@ use Illuminate\Support\Facades\Auth;
 Route::get('/', [HomeController::class, 'index'])->name('/');
 Route::get('/destination/{slug}', [HomeController::class, 'single_destination'])->name('destinations.single');
 Route::get('/destinations/all', [HomeController::class, 'all_destinations'])->name('destinations.all');
+Route::get('/packages/all', [HomeController::class, 'all_packages'])->name('packages.all');
 
 // Auth Routs 
 Auth::routes(['register' => false]);
