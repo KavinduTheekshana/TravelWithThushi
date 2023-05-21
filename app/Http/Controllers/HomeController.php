@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Destinations;
+use App\Models\Packages;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -19,6 +20,15 @@ class HomeController extends Controller
     {
         $destinations = Destinations::where('slug',$slug)->first();
         return view('frontend.destinations.destination', ['destinations' => $destinations]);
+    }
+
+    public function single_package($slug)
+    {
+        $package = Packages::where('slug',$slug)->first();
+        $package_list = Packages::where('status',1)->get();
+        $package_id = $package->id;
+        $package_details = DB::table('package_details')->where('package_id',$package_id)->where('status',1)->whereNull('deleted_at')->orderBy('day', 'asc')->get();
+        return view('frontend.packages.package_details', ['package' => $package, 'package_list' => $package_list,'package_details' => $package_details,]);
     }
 
     public function all_destinations()

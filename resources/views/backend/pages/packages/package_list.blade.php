@@ -80,7 +80,7 @@
                                             
                                             <div class=" table-icon-group">
 
-                                                <a href="{{ route('destinations.update_view', ['id' => $package->id]) }}" type="button"
+                                                <a href="{{ route('package.view', ['id' => $package->id]) }}" type="button"
                                                     class="btn btn-primary"><i class='bx bx-align-middle me-0 margin-btn'></i></a>
 
 

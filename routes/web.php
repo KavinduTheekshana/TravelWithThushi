@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BookingController;
 use App\Http\Controllers\DashboardController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
@@ -24,6 +25,11 @@ Route::get('/', [HomeController::class, 'index'])->name('/');
 Route::get('/destination/{slug}', [HomeController::class, 'single_destination'])->name('destinations.single');
 Route::get('/destinations/all', [HomeController::class, 'all_destinations'])->name('destinations.all');
 Route::get('/packages/all', [HomeController::class, 'all_packages'])->name('packages.all');
+Route::get('/packages/{slug}', [HomeController::class, 'single_package'])->name('packages.single');
+
+// Booking Routs 
+Route::post('/booking/send', [BookingController::class, 'save'])->name('booking.send');
+
 
 // Auth Routs 
 Auth::routes(['register' => false]);
@@ -56,6 +62,7 @@ Route::post('/package-update', [PackagesController::class, 'update'])->name('pac
 Route::get('/package-update-view/{id}', [PackagesController::class, 'update_view'])->name('package.update_view');
 Route::get('/package-add-details/{id}', [PackagesController::class, 'add_details'])->name('package.add.details');
 Route::get('/package-details-list/{id}', [PackagesController::class, 'details_list'])->name('package.details.list');
+Route::get('/package-view/{id}', [PackagesController::class, 'package_view'])->name('package.view');
 
 // Package Details Back End 
 Route::post('/save-package-details', [PackageDetailsController::class, 'save'])->name('package.save.details');

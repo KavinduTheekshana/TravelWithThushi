@@ -20,15 +20,18 @@
 
                 <div class="ms-auto">
                     <div class="btn-group">
-                        <a href="{{ route('package.add.details', ['id' => $package->id]) }}" type="button"
-                            class="btn btn-primary"><i class='bx bx-message-square-add'></i> Add Package Details</a>
+                        <a href="{{ route('package.list') }}" type="button"
+                            class="btn btn-warning"><i class='bx bx-arrow-back'></i>Back</a>
+
+                            <a href="{{ route('package.add.details', ['id' => $package->id]) }}" type="button"
+                                class="btn btn-primary"><i class='bx bx-message-square-add'></i> Add Package Details</a>
 
                     </div>
                 </div>
             </div>
             <!--end breadcrumb-->
             <h6 class="mb-0 text-uppercase">all added Package Details about <span class="txt-blue">
-                    "{{ $package->title }}"</span> </h6>
+                   <a href="{{ route('package.list') }}"> "{{ $package->title }}"</a></span> </h6>
             <hr />
             @include('backend.components.alert')
             <div class="card">

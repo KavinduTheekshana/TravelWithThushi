@@ -3,7 +3,7 @@
     <figure class="package-image" style="background-image: url({{asset(url($package->image))}});"></figure>
     <div class="package-content">
        <h3>
-          <a href="package-detail.html">
+          <a href="{{ route('packages.single', ['slug' => $package->slug]) }}">
             {{ $package->title }}
           </a>
        </h3>
@@ -38,7 +38,7 @@
           <span>${{ $package->price }}</span>
           / per person
        </h6>
-       <a href="booking.html" class="outline-btn outline-btn-white">Book now</a>
+       <a href="{{ route('packages.single', ['slug' => $package->slug]) }}" class="outline-btn outline-btn-white">Book now</a>
     </div>
  </article>
  @endforeach

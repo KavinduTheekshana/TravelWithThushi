@@ -20,6 +20,13 @@ class PackagesController extends Controller
         return view('backend.pages.packages.package_list', ['packages' => $packages]);
     }
 
+    public function package_view($id)
+    {
+        $package = DB::table('packages')->where('id',$id)->whereNull('deleted_at')->first();
+        $package_details = DB::table('package_details')->where('package_id',$id)->whereNull('deleted_at')->orderBy('day', 'asc')->get();
+        return view('backend.pages.packages.package_details', ['package' => $package,'package_details' => $package_details]);
+    }
+
     public function add()
     {
         return view('backend.pages.packages.package_add');
@@ -161,7 +168,7 @@ class PackagesController extends Controller
     public function details_list($id)
     {
         $package = Packages::find($id);
-        $package_details = DB::table('package_details')->where('package_id',$id)->whereNull('deleted_at')->get();
+        $package_details = DB::table('package_details')->where('package_id',$id)->whereNull('deleted_at')->orderBy('day', 'asc')->get();
         return view('backend.pages.packages.details_list', ['package' => $package, 'package_details' => $package_details]);
     }
 }

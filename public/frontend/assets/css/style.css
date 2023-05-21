@@ -995,7 +995,9 @@ input[type=submit]:focus {
 .text-btn:hover, .text-btn:focus, .text-btn:active {
   color: #3A78C9;
 }
-
+.slick-active button{
+  background-color: #3A78C9 !important;
+}
 /*--------------------------------------------------------------
 >>> Default 
 ----------------------------------------------------------------*/
@@ -4238,6 +4240,13 @@ input[type=submit]:focus {
   -moz-border-radius: 25px;
   -ms-border-radius: 25px;
   border-radius: 25px;
+}
+.package-details-single{
+  height: 200px !important;
+}
+.package-details-single img{
+  height: 100% !important;
+  object-fit: cover;
 }
 .sidebar .package-map {
   -webkit-border-radius: 25px;
