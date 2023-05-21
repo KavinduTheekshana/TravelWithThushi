@@ -105,33 +105,33 @@
                                         @csrf --}}
                                     <form id="boockingForm" class="booking-form">
                                         @csrf
-                                        <input type="text" name="package_id" value="{{ $package->id }}" hidden>
-                                        <input type="text" name="package_name" value="{{ $package->title }}" hidden>
+                                        <input  name="package_id" value="{{ $package->id }}" hidden>
+                                        <input  name="package_name" value="{{ $package->title }}" hidden>
 
 
                                         <p>
-                                            <input type="text" name="name" placeholder="Your Name...">
+                                            <input id="name" type="text" name="name" placeholder="Your Name...">
                                         </p>
                                         <p>
-                                            <input type="email" name="email" placeholder="Your Email...">
-                                        </p>
-
-                                        <p>
-                                            <input type="text" name="phone" placeholder="Your Phone Number...">
+                                            <input id="email" type="email" name="email" placeholder="Your Email...">
                                         </p>
 
                                         <p>
-                                            <input type="text" name="country" placeholder="Your Country...">
+                                            <input id="phone" type="text" name="phone" placeholder="Your Phone Number...">
+                                        </p>
+
+                                        <p>
+                                            <input id="country" type="text" name="country" placeholder="Your Country...">
                                         </p>
 
                                         <p class="width-5">
                                             <label>Checkin Date</label>
-                                            <input class="input-date-picker" type="text" name="checkin"
+                                            <input id="checkin" class="input-date-picker" type="text" name="checkin"
                                                 placeholder="MM / DD / YY" autocomplete="off" readonly="readonly">
                                         </p>
                                         <p class="width-5">
                                             <label>Checkout Date</label>
-                                            <input class="input-date-picker" type="text" name="checkout"
+                                            <input id="checkout" class="input-date-picker" type="text" name="checkout"
                                                 placeholder="MM / DD / YY" autocomplete="off" readonly="readonly">
                                         </p>
 
@@ -204,12 +204,19 @@
                 method: 'POST',
                 data: formData,
                 success: function(response) {
-                    // Handle the response from the server
+
+                    
                     Swal.fire({
                         icon: 'success',
                         title: 'Success!',
                         text: response.success
                     });
+                    $('#name').val('');
+                    $('#email').val('');
+                    $('#phone').val('');
+                    $('#country').val('');
+                    $('#checkin').val('MM / DD / YY');
+                    $('#checkout').val('MM / DD / YY');
                 },
                 error: function(xhr) {
                     // Handle error response

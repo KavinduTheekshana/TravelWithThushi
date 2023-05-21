@@ -998,6 +998,12 @@ input[type=submit]:focus {
 .slick-active button{
   background-color: #3A78C9 !important;
 }
+.swal2-styled.swal2-confirm{
+  background-color: #3A78C9 !important;
+}
+.swal2-styled.swal2-confirm:focus {
+  box-shadow: 0 0 0 3px #3a78c986 !important;
+  }
 /*--------------------------------------------------------------
 >>> Default 
 ----------------------------------------------------------------*/

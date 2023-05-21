@@ -2,9 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\BookingInquiry;
+use App\Mail\FormSubmissionMail;
 use App\Models\Booking;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Mail;
 
 class BookingController extends Controller
 {
@@ -21,18 +24,23 @@ class BookingController extends Controller
             'checkout' => ['required'],
         ]);
 
-        $boocking = new Booking();
-        $boocking->package_id = $request->input('package_id');
-        $boocking->package_name = $request->input('package_name');
-        $boocking->name = $request->input('name');
-        $boocking->email = $request->input('email');
-        $boocking->phone = $request->input('phone');
-        $boocking->country = $request->input('country');
-        $boocking->checkin = $request->input('checkin');
-        $boocking->checkout = $request->input('checkout');
+        $booking = new Booking();
+        $booking->package_id = $request->input('package_id');
+        $booking->package_name = $request->input('package_name');
+        $booking->name = $request->input('name');
+        $booking->email = $request->input('email');
+        $booking->phone = $request->input('phone');
+        $booking->country = $request->input('country');
+        $booking->checkin = $request->input('checkin');
+        $booking->checkout = $request->input('checkout');
 
-        $boocking->save();
-        // return redirect()->back()->with('status', 'Your Inquiry Sent Sucessfully');
+        $booking->save();
+        
+    
+        // Send the email
+        $formData = $request->all();
+        Mail::to('kavindutheekshana@gmail.com')->send(new BookingInquiry($formData));
+
 
 
         return response()->json(['success' => 'Your Inquiry Sent Sucessfully']);
