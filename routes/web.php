@@ -26,6 +26,8 @@ Route::get('/destination/{slug}', [HomeController::class, 'single_destination'])
 Route::get('/destinations/all', [HomeController::class, 'all_destinations'])->name('destinations.all');
 Route::get('/packages/all', [HomeController::class, 'all_packages'])->name('packages.all');
 Route::get('/packages/{slug}', [HomeController::class, 'single_package'])->name('packages.single');
+Route::get('/about', [HomeController::class, 'about'])->name('about');
+Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
 
 // Booking Routs 
 Route::post('/booking/send', [BookingController::class, 'save'])->name('booking.send');
@@ -71,3 +73,11 @@ Route::get('/package-details-diactive/{id}', [PackageDetailsController::class, '
 Route::get('/package-details-delete/{id}', [PackageDetailsController::class, 'delete'])->name('package.delete.details');
 Route::post('/package-update-details', [PackageDetailsController::class, 'update'])->name('package.update.details');
 Route::get('/package-update-view-details/{id}', [PackageDetailsController::class, 'update_view'])->name('package.update_view.details');
+
+// Bookings Back End 
+Route::middleware('auth')->group(function () {
+    Route::get('/bookings-list', [BookingController::class, 'list'])->name('bookings.list');
+    Route::get('/booking-read/{id}', [BookingController::class, 'read'])->name('booking.read');
+    Route::get('/booking-unread/{id}', [BookingController::class, 'unread'])->name('booking.unread');
+    Route::get('/booking-delete/{id}', [BookingController::class, 'delete'])->name('booking.delete');
+});

@@ -50,6 +50,14 @@
                 </ul>
             </li>
 
+            <li>
+                <a href="{{ route('bookings.list') }}">
+                    <div class="parent-icon"><i class='bx bx-bookmark-alt'></i>
+                    </div>
+                    <div class="menu-title">Bookings</div>
+                </a>
+            </li>
+
 
             <li class="menu-label">UI Elements</li>
             <li>

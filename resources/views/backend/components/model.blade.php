@@ -7,7 +7,7 @@
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
               <div class="modal-body">
-                  <img src="{{ asset('backend/assets/images/default.jpg') }}" class="model-image" />
+                  <img src="" class="model-image" />
                   <br>
                   <br>
                   <span id="active-badge" class="badge bg-success"></span>

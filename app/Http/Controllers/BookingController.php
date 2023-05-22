@@ -41,8 +41,34 @@ class BookingController extends Controller
         $formData = $request->all();
         Mail::to('kavindutheekshana@gmail.com')->send(new BookingInquiry($formData));
 
-
-
         return response()->json(['success' => 'Your Inquiry Sent Sucessfully']);
+    }
+
+
+    public function list()
+    {
+        $bookings = DB::table('bookings')->whereNull('deleted_at')->orderBy('id', 'desc')->get();
+        return view('backend.pages.bookings.bookings', ['bookings' => $bookings]);
+    }
+
+    public function read($id)
+    {
+        $Booking = Booking::find($id);
+        $Booking->read = '0';
+        $Booking->save();
+        return redirect()->back()->with('status', 'Booking Mark as Read Sucessfully');
+    }
+    public function unread($id)
+    {
+        $Booking = Booking::find($id);
+        $Booking->read = '1';
+        $Booking->save();
+        return redirect()->back()->with('status', 'Booking Mark as Unreead Sucessfully');
+    }
+    public function delete($id)
+    {
+        $Booking = Booking::find($id);
+        $Booking->delete();
+        return redirect()->back()->with('status', 'Booking Delete Sucessfully');
     }
 }

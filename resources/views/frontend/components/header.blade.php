@@ -57,8 +57,8 @@
                       <li class="{{ request()->is('/') ? 'menu-active' : '' }}">
                          <a href="{{ route('/') }}">Home</a>
                       </li>
-                      <li>
-                         <a href="about.html">about us</a>
+                      <li class="{{ request()->is('about') ? 'menu-active' : '' }}">
+                         <a href="{{ route('about') }}">about us</a>
                       </li>
                       <li class="{{ Request::segment(1) === 'destinations' ? 'menu-active' : null }}">
                          <a href="{{ route('destinations.all') }}">destination</a>
@@ -67,73 +67,20 @@
                       <li class="{{ Request::segment(1) === 'packages' ? 'menu-active' : null }}">
                         <a href="{{ route('packages.all') }}">packages</a>
                      </li>
+                     <li class="{{ request()->is('gallery') ? 'menu-active' : '' }}">
+                        <a href="{{ route('contact') }}">Gallery</a>
+                     </li>
+                     <li class="{{ request()->is('contact') ? 'menu-active' : '' }}">
+                        <a href="{{ route('contact') }}">Contact Us</a>
+                     </li>
 
                   
-                      <li class="menu-item-has-children">
-                         <a href="index.html">Pages</a>
-                         <ul>
-                            <li>
-                               <a href="home-banner.html">Home Banner</a>
-                            </li>
-                            <li>
-                               <a href="service.html">Service</a>
-                            </li>
-                            <li class="menu-item-has-children">
-                               <a href="#">Career</a>
-                               <ul>
-                                  <li>
-                                     <a href="career.html">Career</a>
-                                  </li>
-                                  <li>
-                                     <a href="career-detail.html">Career detail</a>
-                                  </li>
-                               </ul>
-                            </li>
-                            <li>
-                               <a href="team.html">Tour guide</a>
-                            </li>
-                            <li>
-                               <a href="gallery.html">Gallery page</a>
-                            </li>
-                            <li class="menu-item-has-children">
-                               <a href="#">Blog</a>
-                               <ul>
-                                  <li>
-                                     <a href="blog-archive.html">Blog archive</a>
-                                  </li>
-                                  <li>
-                                     <a href="blog-single.html">blog single</a>
-                                  </li>
-                               </ul>
-                            </li>
-                            <li>
-                               <a href="single-page.html">Single Page</a>
-                            </li>
-                            <li>
-                               <a href="testimonial.html">Testimonial</a>
-                            </li>
-                            <li>
-                               <a href="faq.html">Faq Page</a>
-                            </li>
-                            <li>
-                               <a href="search-page.html">Search Page</a>
-                            </li>
-                            <li>
-                               <a href="404.html">404 Page</a>
-                            </li>
-                            <li>
-                               <a href="comming-soon.html">Comming Soon Page</a>
-                            </li>
-                         </ul>
-                      </li>
-                      <li>
-                         <a href="contact.html">contact us</a>
-                      </li>
+                     
                    </ul>
                 </nav>
              </div>
              <div class="header-btn">
-                <a href="booking.html" class="round-btn">Book Now</a>
+                <a href="booking.html" class="round-btn">Plan a Tour</a>
              </div>
           </div>
        </div>
