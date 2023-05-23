@@ -26,46 +26,46 @@
                     <div class="col-lg-8">
                         <div class="about-content">
                             <figure class="about-image">
-                                <img src="{{ asset('frontend/assets/images/GettyRF_1129567869.jpg') }}" alt="">
-                                <div class="about-image-content">
+                                <img data-animscroll="fade-right" data-animscroll-delay="100" src="{{ asset('frontend/assets/images/GettyRF_1129567869.jpg') }}" alt="">
+                                <div data-animscroll="fade-left" data-animscroll-delay="100" class="about-image-content">
                                     <h3>WE ARE BEST FOR TOURS & TRAVEL SINCE 2002 !</h3>
                                 </div>
                             </figure>
-                            <h2>HOW WE ARE BEST FOR TRAVEL !</h2>
-                            <p>Welcome to our travel website! With over 14 years of experience in organizing
+                            <h2 data-animscroll="fade-right" data-animscroll-delay="100" >HOW WE ARE BEST FOR TRAVEL !</h2>
+                            <p data-animscroll="fade-up" data-animscroll-delay="100">Welcome to our travel website! With over 14 years of experience in organizing
                                 unforgettable tours, we are dedicated to providing you with an exceptional travel
                                 experience in Sri Lanka. </p>
 
-                            <p> As a trusted tour organizer, we prioritize your comfort and safety. Our fleet of fully
+                            <p data-animscroll="fade-up" data-animscroll-delay="100"> As a trusted tour organizer, we prioritize your comfort and safety. Our fleet of fully
                                 air-conditioned vehicles ensures that you travel in utmost comfort while exploring the
                                 stunning landscapes and cultural treasures of Sri Lanka. Your peace of mind is important
                                 to us, which is why we provide comprehensive travel insurance for every tour. </p>
 
-                            <p> Our team of experienced drivers is not only knowledgeable about the country but also
+                            <p data-animscroll="fade-up" data-animscroll-delay="100"> Our team of experienced drivers is not only knowledgeable about the country but also
                                 committed to delivering excellent service. They will navigate the roads with expertise,
                                 ensuring smooth and efficient travel throughout your journey. </p>
 
-                            <p> We understand that accommodation plays a vital role in your travel experience. That's
+                            <p data-animscroll="fade-up" data-animscroll-delay="100"> We understand that accommodation plays a vital role in your travel experience. That's
                                 why we offer a wide range of options to suit your preferences and budget. Whether you
                                 prefer luxury resorts, cozy boutique hotels, or authentic homestays, we will help you
                                 find the perfect accommodation that reflects the charm and character of Sri Lanka. </p>
 
-                            <p> Upon your arrival, our reliable airport pick-up service will be waiting to greet you,
+                            <p data-animscroll="fade-up" data-animscroll-delay="100"> Upon your arrival, our reliable airport pick-up service will be waiting to greet you,
                                 making your transition into this beautiful country seamless and hassle-free. We want you
                                 to feel at home during your stay, which is why we provide authentic Sri Lankan cushions
                                 in our vehicles, adding a touch of local culture and comfort to your journey. </p>
 
-                            <p> At our travel agency, we believe that exploring Sri Lanka should be an enriching and
+                            <p data-animscroll="fade-up" data-animscroll-delay="100"> At our travel agency, we believe that exploring Sri Lanka should be an enriching and
                                 affordable experience for everyone. We strive to offer competitive prices without
                                 compromising on quality or service. Our commitment to transparency and customer
                                 satisfaction has earned us a reputation for providing trustworthy and reliable service.
                             </p>
 
-                            <p> We look forward to being a part of your Sri Lankan adventure and creating memories that
+                            <p data-animscroll="fade-up" data-animscroll-delay="100"> We look forward to being a part of your Sri Lankan adventure and creating memories that
                                 will last a lifetime. Let us handle the logistics while you immerse yourself in the
                                 wonders of this captivating island. Trust us to make your travel dreams come true.</p>
                         </div>
-                        <div class="client-slider white-bg">
+                        <div class="client-slider white-bg" data-animscroll="fade-up" data-animscroll-delay="100">
                             <figure class="client-item">
                                 <img src="{{ asset('frontend/assets/images/logos/Jetwing_Hotels.jpeg') }}"
                                     alt="">
@@ -90,7 +90,7 @@
 
 
                     <div class="col-lg-4">
-                        <div class="icon-box">
+                        <div data-animscroll="fade-left" data-animscroll-delay="100" class="icon-box">
                             <div class="box-icon">
                                 <i aria-hidden="true" class="fas fa-umbrella-beach"></i>
                             </div>
@@ -99,7 +99,7 @@
                                 <p>With 14+ years of experience, we excel in creating unforgettable travel experiences in Sri Lanka. Our well-planned itineraries ensure you make the most of your time in this captivating country.</p>
                             </div>
                         </div>
-                        <div class="icon-box">
+                        <div data-animscroll="fade-left" class="icon-box">
                             <div class="box-icon">
                                 <i aria-hidden="true" class="fas fa-user-tag"></i>
                             </div>
@@ -108,7 +108,7 @@
                                <p>Experience personalized and trustworthy service that exceeds expectations. Let us handle the logistics, while you fully immerse yourself in the wonders of Sri Lanka.</p>
                             </div>
                         </div>
-                        <div class="icon-box">
+                        <div data-animscroll="fade-left" class="icon-box">
                             <div class="box-icon">
                                 <i aria-hidden="true" class="fas fa-headset"></i>
                             </div>

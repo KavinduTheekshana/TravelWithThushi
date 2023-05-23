@@ -1,9 +1,9 @@
-<div class="inner-counter">
-    <div class="container">
-       <div class="counter-wrap">
+
+    <div  class="container">
+       <div data-animscroll="fade-up" class="counter-wrap">
           <div class="counter-item">
              <span class="counter-no">
-                <span class="counter">80</span>K+
+                <span class="counter">870</span>+
              </span>
              <span class="counter-desc">
                 SATISFIED CUSTOMER
@@ -11,7 +11,7 @@
           </div>
           <div class="counter-item">
              <span class="counter-no">
-                <span class="counter">18</span>+
+                <span class="counter">180</span>+
              </span>
              <span class="counter-desc">
                 ACTIVE MEMBERS
@@ -27,7 +27,7 @@
           </div>
           <div class="counter-item">
              <span class="counter-no">
-                <span class="counter">75</span>+
+                <span class="counter">25</span>+
              </span>
              <span class="counter-desc">
                 TRAVEL GUIDES
@@ -35,4 +35,3 @@
           </div>
        </div>
     </div>
- </div>

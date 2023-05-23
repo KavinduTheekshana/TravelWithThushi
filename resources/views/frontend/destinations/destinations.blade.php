@@ -22,7 +22,9 @@
                </div>
             </div>
    
+            <div class="inner-counter">
             @include('frontend.components.inner_counter')
+            </div>
             @include('frontend.destinations.counter_bg')
             </section>
          </main>

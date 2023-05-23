@@ -18,7 +18,7 @@
                 <div class="row">
                     <div class="col-lg-8 primary right-sidebar">
                         <div class="single-packge-wrap">
-                            <div class="single-package-head d-flex align-items-center">
+                            <div data-animscroll="fade-up" class="single-package-head d-flex align-items-center">
                                 <div class="package-title">
                                     <h2>{{ $package->title }}</h2>
                                     <div class="rating-start-wrap">
@@ -34,7 +34,7 @@
                                     </h6>
                                 </div>
                             </div>
-                            <div class="package-meta">
+                            <div class="package-meta" data-animscroll="fade-up">
                                 <ul>
                                     <li>
                                         <i class="fas fa-clock"></i>
@@ -55,10 +55,10 @@
                                     </li>
                                 </ul>
                             </div>
-                            <figure class="single-package-image">
+                            <figure data-animscroll="fade-up" class="single-package-image">
                                 <img src="{{ asset($package->image) }}" alt="">
                             </figure>
-                            <div class="package-content-detail">
+                            <div data-animscroll="fade-up" class="package-content-detail">
                                 <article class="package-overview">
                                     <p> {!! $package->description !!}</p>
                                 </article>
@@ -66,20 +66,20 @@
                             </div>
 
 
-                            @foreach ($package_details as $details)
+                            @foreach ($package_details as $key => $details)
                                 <div class="package-content-detail">
                                     <article class="package-overview">
-                                        <h3 class="m-0">DAY {{ $details->day }} | {{ $details->title }}</h3>
-                                        <h6>- {{ $details->location }}</h6>
-                                        <img src="{{ asset($details->image) }}" alt="">
-                                        <p> {!! $details->description !!}</p>
+                                        <h3 data-animscroll="fade-up" data-animscroll-delay="{{$key*100}}" class="m-0">DAY {{ $details->day }} | {{ $details->title }}</h3>
+                                        <h6 data-animscroll="fade-up" data-animscroll-delay="{{$key*100}}">- {{ $details->location }}</h6>
+                                        <img data-animscroll="fade-up" data-animscroll-delay="{{$key*100}}" src="{{ asset($details->image) }}" alt="">
+                                        <p data-animscroll="fade-up" data-animscroll-delay="{{$key*100}}"> {!! $details->description !!}</p>
                                     </article>
                                 </div>
                             @endforeach
 
                             <div class="package-content-detail">
 
-                                <article class="package-include bg-light-grey">
+                                <article data-animscroll="fade-up" class="package-include bg-light-grey">
                                     <h3>INCLUDE & EXCLUDE :</h3>
                                     <ul>
                                         <li><i class="fas fa-check"></i>Accommodation</li>
@@ -97,7 +97,7 @@
                     </div>
                     <div class="col-lg-4">
                         <div class="sidebar">
-                            <div class="booking-form-wrap">
+                            <div class="booking-form-wrap" data-animscroll="fade-left">
                                 <div class="booking-form-inner primary-bg">
                                     <h3>BOOKING FORM</h3>
                                     <p>Plan Your Perfect Getaway with Convenient and Hassle-Free Booking</p>
@@ -143,7 +143,7 @@
                                     </form>
                                 </div>
                             </div>
-                            <div class="related-package">
+                            <div class="related-package" data-animscroll="fade-left">
                                 <h3>RELATED IMAGES</h3>
                                 <p>Explore the World Through Our Eyes
 
@@ -160,7 +160,7 @@
                                 </div>
                             </div>
 
-                            <div class="package-list">
+                            <div class="package-list" data-animscroll="fade-left">
                                 <div class="overlay"></div>
                                 <h4>MORE PACKAGES</h4>
                                 <ul>
