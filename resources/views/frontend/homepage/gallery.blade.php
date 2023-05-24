@@ -11,42 +11,12 @@
             </div>
         </div>
         <div class="gallery-section">
-            <div class="gallery-container grid">
-                <div class="single-gallery grid-item">
-                    <figure class="gallery-img">
-                        <a href="assets/images/img14.jpg" data-fancybox="gallery">
-                            <img src="assets/images/img14.jpg" alt="">
-                        </a>
-                    </figure>
-                </div>
-                <div class="single-gallery grid-item">
-                    <figure class="gallery-img">
-                        <a href="assets/images/img11.jpg" data-fancybox="gallery">
-                            <img src="assets/images/img11.jpg" alt="">
-                        </a>
-                    </figure>
-                </div>
-                <div class="single-gallery grid-item">
-                    <figure class="gallery-img">
-                        <a href="assets/images/img12.jpg" data-fancybox="gallery">
-                            <img src="assets/images/img12.jpg" alt="">
-                        </a>
-                    </figure>
-                </div>
-                <div class="single-gallery grid-item">
-                    <figure class="gallery-img">
-                        <a href="assets/images/img13jpg" data-fancybox="gallery">
-                            <img src="assets/images/img13.jpg" alt="">
-                        </a>
-                    </figure>
-                </div>
-                <div class="single-gallery grid-item">
-                    <figure class="gallery-img">
-                        <a href="assets/images/img10.jpg" data-fancybox="gallery">
-                            <img src="assets/images/img10.jpg" alt="">
-                        </a>
-                    </figure>
-                </div>
+            <div class="gallery-container grid" data-animscroll="fade-up">
+
+
+                @include('frontend.gallery.single')
+             
+              
             </div>
         </div>
     </div>

@@ -5,6 +5,7 @@ use App\Http\Controllers\DashboardController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\DestinationsController;
+use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\PackageDetailsController;
 use App\Http\Controllers\PackagesController;
 use Illuminate\Support\Facades\Auth;
@@ -27,6 +28,7 @@ Route::get('/destinations/all', [HomeController::class, 'all_destinations'])->na
 Route::get('/packages/all', [HomeController::class, 'all_packages'])->name('packages.all');
 Route::get('/packages/{slug}', [HomeController::class, 'single_package'])->name('packages.single');
 Route::get('/about', [HomeController::class, 'about'])->name('about');
+Route::get('/gallery', [HomeController::class, 'gallery'])->name('gallery');
 Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
 
 // Booking Routs 
@@ -81,3 +83,13 @@ Route::middleware('auth')->group(function () {
     Route::get('/booking-unread/{id}', [BookingController::class, 'unread'])->name('booking.unread');
     Route::get('/booking-delete/{id}', [BookingController::class, 'delete'])->name('booking.delete');
 });
+
+// Gallery Back End 
+Route::get('/image-list', [GalleryController::class, 'list'])->name('image.list');
+Route::get('/add-image', [GalleryController::class, 'add'])->name('image.add');
+Route::post('/save-image', [GalleryController::class, 'save'])->name('image.save');
+Route::get('/image-popular/{id}', [GalleryController::class, 'popular'])->name('image.popular');
+Route::get('/image-notpopular/{id}', [GalleryController::class, 'notpopular'])->name('image.notpopular');
+Route::get('/image-active/{id}', [GalleryController::class, 'active'])->name('image.active');
+Route::get('/image-diactive/{id}', [GalleryController::class, 'diactive'])->name('image.diactive');
+Route::get('/image-delete/{id}', [GalleryController::class, 'delete'])->name('image.delete');

@@ -68,7 +68,7 @@
                         <a href="{{ route('packages.all') }}">packages</a>
                      </li>
                      <li class="{{ request()->is('gallery') ? 'menu-active' : '' }}">
-                        <a href="{{ route('contact') }}">Gallery</a>
+                        <a href="{{ route('gallery') }}">Gallery</a>
                      </li>
                      <li class="{{ request()->is('contact') ? 'menu-active' : '' }}">
                         <a href="{{ route('contact') }}">Contact Us</a>

@@ -51,6 +51,21 @@
             </li>
 
             <li>
+                <a href="javascript:;" class="has-arrow">
+                    <div class="parent-icon"><i class='bx bx-images'></i>
+                    </div>
+                    <div class="menu-title">Gallery</div>
+                </a>
+                <ul>
+                    <li> <a href="{{ route('image.list') }}"><i class='bx bx-radio-circle'></i>Image List</a>
+                    </li>
+                    <li> <a href="{{ route('image.add') }}"><i class='bx bx-radio-circle'></i>Add Image</a>
+                    </li>
+                
+                </ul>
+            </li>
+
+            <li>
                 <a href="{{ route('bookings.list') }}">
                     <div class="parent-icon"><i class='bx bx-bookmark-alt'></i>
                     </div>

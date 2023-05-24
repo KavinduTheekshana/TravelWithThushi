@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- favicon -->
-    <link rel="icon" type="image/png" href="{{ asset('frontend/assets/images/favicon.png') }}">
+    <link rel="icon" type="image/png" href="{{ asset('frontend/assets/images/icon.png') }}">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="{{ asset('frontend/assets/vendors/bootstrap/css/bootstrap.min.css') }}" media="all">
     <!-- jquery-ui css -->

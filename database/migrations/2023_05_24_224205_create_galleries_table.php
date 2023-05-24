@@ -11,8 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('comments', function (Blueprint $table) {
+        Schema::create('galleries', function (Blueprint $table) {
             $table->id();
+            $table->string('title');
+            $table->string('image');
+            $table->boolean('status')->default(1);
+            $table->boolean('popular')->default(0);
+            $table->softDeletes();
             $table->timestamps();
         });
     }
@@ -22,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('comments');
+        Schema::dropIfExists('galleries');
     }
 };

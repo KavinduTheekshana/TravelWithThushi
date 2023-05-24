@@ -13,7 +13,8 @@ class HomeController extends Controller
     {
         $destinations = DB::table('destinations')->where('status', 1)->where('popular_status', 1)->whereNull('deleted_at')->get();
         $packages = DB::table('packages')->where('status', 1)->where('popular_status', 1)->whereNull('deleted_at')->get();
-        return view('frontend.home', ['destinations' => $destinations,'packages' => $packages]);
+        $gallery = DB::table('galleries')->where('status', 1)->where('popular', 1)->whereNull('deleted_at')->get();
+        return view('frontend.home', ['destinations' => $destinations,'packages' => $packages,'gallery' => $gallery]);
     }
 
     public function about()
@@ -24,6 +25,12 @@ class HomeController extends Controller
     public function contact()
     {
         return view('frontend.contact.contact');
+    }
+
+    public function gallery()
+    {
+        $gallery = DB::table('galleries')->where('status', 1)->whereNull('deleted_at')->get();
+        return view('frontend.gallery.gallery', ['gallery' => $gallery]);
     }
 
     public function single_destination($slug)

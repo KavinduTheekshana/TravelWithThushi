@@ -35,8 +35,8 @@ class PackageDetailsController extends Controller
 
         if ($request->hasFile('image')) {
             $image = $request->file('image');
-            $packageDetailsPath = 'uploads/packages/'; // upload path
-            $package_details_image = 'uploads/packages/' . date('YmdHis') . "." . $image->getClientOriginalExtension();
+            $packageDetailsPath = 'uploads/packages/details'; // upload path
+            $package_details_image = 'uploads/packages/details' . date('YmdHis') . "." . $image->getClientOriginalExtension();
             $image->move($packageDetailsPath, $package_details_image);
             $package_details->image = "$package_details_image";
         } else {
@@ -97,8 +97,8 @@ class PackageDetailsController extends Controller
 
         if ($request->hasFile('image')) {
             $image = $request->file('image');
-            $packagePath = 'uploads/destinations/'; // upload path
-            $package_image = 'uploads/destinations/' . date('YmdHis') . "." . $image->getClientOriginalExtension();
+            $packagePath = 'uploads/packages/details'; // upload path
+            $package_image = 'uploads/packages/details' . date('YmdHis') . "." . $image->getClientOriginalExtension();
             $image->move($packagePath, $package_image);
             $package_details->image = "$package_image";
         } else {
