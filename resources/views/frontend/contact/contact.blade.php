@@ -103,14 +103,12 @@
                            <h4>EMAIL ADDRESS</h4>
                            <ul>
                               <li>
-                                 <a href="mailto:support@gmail.com">support@gmail.com</a>
+                                 <a href="mailto:info@seylanodyssey.com">info@seylanodyssey.com</a>
                               </li>
                               <li>
-                                 <a href="mailto:name@comapny.com">name@comapny.com</a>
+                                 <a href="mailto:indikathushani@gmail.com">indikathushani@gmail.com</a>
                               </li>
-                              <li>
-                                 <a href="mailto:info@domain.com">info@domain.com</a>
-                              </li>
+                              
                            </ul>
                         </div>
                      </div>
@@ -124,14 +122,12 @@
                            <h4>PHONE NUMBER</h4>
                            <ul>
                               <li>
-                                 <a href="tell:+132599254669">+132 (599) 254 669</a>
+                                 <a href="tell:+447863844411">+44 7863 844411</a>
                               </li>
                               <li>
-                                 <a href="callto:123669255587">+123 (669) 255 587</a>
+                                 <a href="tell:+447863844411">-</a>
                               </li>
-                              <li>
-                                 <a href="callto:01977259912">+01 (977) 2599 12</a>
-                              </li>
+                            
                            </ul>
                         </div>
                      </div>
@@ -145,14 +141,13 @@
                            <h4>ADDRESS LOCATION</h4>
                            <ul>
                               <li>
-                                 3146 Koontz, California
+                                 Bryanstone Road, Waltham Cross,
+                                     
                               </li>
                               <li>
-                                 Quze.24 Second floor
+                                 United Kingdom
                               </li>
-                              <li>
-                                 36 Street, Melbourne
-                              </li>
+                              
                            </ul>
                         </div>
                      </div>

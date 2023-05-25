@@ -40,6 +40,12 @@ a {
 	object-fit: cover;
 	border-radius: 10px;
 }
+.table-image-holder-round{
+	width: 60px;
+	height: 60px;
+	object-fit: cover;
+	border-radius: 100%;
+}
 .btn-purple{
 	background-color: #6f42c1;
 	color: #fff;

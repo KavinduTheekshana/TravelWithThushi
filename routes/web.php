@@ -9,6 +9,7 @@ use App\Http\Controllers\DestinationsController;
 use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\PackageDetailsController;
 use App\Http\Controllers\PackagesController;
+use App\Http\Controllers\TestimonialController;
 use Illuminate\Support\Facades\Auth;
 /*
 |--------------------------------------------------------------------------
@@ -97,3 +98,21 @@ Route::get('/image-notpopular/{id}', [GalleryController::class, 'notpopular'])->
 Route::get('/image-active/{id}', [GalleryController::class, 'active'])->name('image.active');
 Route::get('/image-diactive/{id}', [GalleryController::class, 'diactive'])->name('image.diactive');
 Route::get('/image-delete/{id}', [GalleryController::class, 'delete'])->name('image.delete');
+
+
+// Contact Back End 
+Route::middleware('auth')->group(function () {
+    Route::get('/contact-list', [ContactController::class, 'list'])->name('contact.list');
+    Route::get('/contact-read/{id}', [ContactController::class, 'read'])->name('contact.read');
+    Route::get('/contact-unread/{id}', [ContactController::class, 'unread'])->name('contact.unread');
+    Route::get('/contact-delete/{id}', [ContactController::class, 'delete'])->name('contact.delete');
+});
+
+
+// Testimonial back End 
+Route::get('/testimonial-list', [TestimonialController::class, 'list'])->name('testimonial.list');
+Route::get('/add-testimonial', [TestimonialController::class, 'add'])->name('testimonial.add');
+Route::post('/save-testimonial', [TestimonialController::class, 'save'])->name('testimonial.save');
+Route::get('/testimonial-active/{id}', [TestimonialController::class, 'active'])->name('testimonial.active');
+Route::get('/testimonial-diactive/{id}', [TestimonialController::class, 'diactive'])->name('testimonial.diactive');
+Route::get('/testimonial-delete/{id}', [TestimonialController::class, 'delete'])->name('testimonial.delete');

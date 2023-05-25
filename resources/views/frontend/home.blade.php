@@ -22,136 +22,13 @@
             </div>
             @include('frontend.homepage.gallery')
             @include('frontend.components.discount')
+            @include('frontend.testimonial.testimonial')
+            @include('frontend.homepage.call_to_action')
 
          
           
 
-            <!-- ***Home testimonial html start from here*** -->
-            <section class="home-testimonial mt-gallery">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-8 offset-lg-2 text-center">
-                            <div class="section-heading">
-                                <h5 class="sub-title">CLIENT'S REVIEWS</h5>
-                                <h2 class="section-title">TRAVELLER'S TESTIMONIAL</h2>
-                                <p>Fusce hic augue velit wisi quibusdam pariatur, iusto primis, nec nemo, rutrum. Vestibulum
-                                    cumque laudantium. Sit ornare mollitia tenetur, aptent.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-section testimonial-slider">
-                        <div class="testimonial-item">
-                            <div class="testimonial-content">
-                                <div class="rating-start-wrap">
-                                    <div class="rating-start">
-                                        <span style="width: 80%"></span>
-                                    </div>
-                                </div>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                    ut labore et dolore magna aliqua.</p>
-                                <div class="author-content">
-                                    <figure class="testimonial-img">
-                                        <img src="assets/images/img18.jpg" alt="">
-                                    </figure>
-                                    <div class="author-name">
-                                        <h5>WILLIAM WRIGHT</h5>
-                                        <span>TRAVELLERS</span>
-                                    </div>
-                                </div>
-                                <div class="testimonial-icon">
-                                    <i aria-hidden="true" class="fas fa-quote-left"></i>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="testimonial-item">
-                            <div class="testimonial-content">
-                                <div class="rating-start-wrap">
-                                    <div class="rating-start">
-                                        <span style="width: 80%"></span>
-                                    </div>
-                                </div>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                    ut labore et dolore magna aliqua.</p>
-                                <div class="author-content">
-                                    <figure class="testimonial-img">
-                                        <img src="assets/images/img19.jpg" alt="">
-                                    </figure>
-                                    <div class="author-name">
-                                        <h5>ALISON WHITE</h5>
-                                        <span>TRAVELLERS</span>
-                                    </div>
-                                </div>
-                                <div class="testimonial-icon">
-                                    <i aria-hidden="true" class="fas fa-quote-left"></i>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="testimonial-item">
-                            <div class="testimonial-content">
-                                <div class="rating-start-wrap">
-                                    <div class="rating-start">
-                                        <span style="width: 80%"></span>
-                                    </div>
-                                </div>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                    ut labore et dolore magna aliqua.</p>
-                                <div class="author-content">
-                                    <figure class="testimonial-img">
-                                        <img src="assets/images/img20.jpg" alt="">
-                                    </figure>
-                                    <div class="author-name">
-                                        <h5>GEORGE SMITH</h5>
-                                        <span>TRAVELLERS</span>
-                                    </div>
-                                </div>
-                                <div class="testimonial-icon">
-                                    <i aria-hidden="true" class="fas fa-quote-left"></i>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="testimonial-item">
-                            <div class="testimonial-content">
-                                <div class="rating-start-wrap">
-                                    <div class="rating-start">
-                                        <span style="width: 80%"></span>
-                                    </div>
-                                </div>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                    ut labore et dolore magna aliqua.</p>
-                                <div class="author-content">
-                                    <figure class="testimonial-img">
-                                        <img src="assets/images/img19.jpg" alt="">
-                                    </figure>
-                                    <div class="author-name">
-                                        <h5>ALISON WHITE</h5>
-                                        <span>TRAVELLERS</span>
-                                    </div>
-                                </div>
-                                <div class="testimonial-icon">
-                                    <i aria-hidden="true" class="fas fa-quote-left"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- ***Home testimonial html end here*** -->
-            <!-- ***Home callback html start from here*** -->
-            <section class="home-callback bg-color-callback primary-bg-image" style="background: url({{asset('frontend/assets/images/videobackground.jpg')}}) rgba(0, 0, 0, 0.4)">
-                <div class="container">
-                    <div class="row align-items-center">
-                        <div class="col-md-8">
-                            <h5 class="sub-title color-white-moody">CALL TO ACTION</h5>
-                            <h2 class="section-title color-white">READY FOR UNFORGATABLE TRAVEL. REMEMBER US!</h2>
-                            <p class="color-white-moody">Unforgettable travel awaits! Remember us as your ultimate destination for incredible experiences. Get ready to embark on a journey that will leave a lasting impression. Buckle up and let us take you on a ride you'll never forget!</p>
-                        </div>
-                        <div class="col-md-4 text-md-end">
-                            <a href="contact.html" class="outline-btn outline-btn-white">Contact Us !</a>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- ***Home callback html end here*** -->
+          
         </main>
 
 

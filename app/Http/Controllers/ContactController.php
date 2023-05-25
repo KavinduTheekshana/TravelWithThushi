@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Contact;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Mail;
 
 class ContactController extends Controller
@@ -29,6 +30,33 @@ class ContactController extends Controller
         // Mail::to('kavindutheekshana@gmail.com')->send(new BookingInquiry($formData));
 
         return response()->json(['success' => 'Your Message Sent Sucessfully']);
+    }
+
+    public function list()
+    {
+        $contacts = DB::table('contacts')->whereNull('deleted_at')->orderBy('id', 'desc')->get();
+        return view('backend.pages.contact.contact', ['contacts' => $contacts]);
+    }
+
+    public function read($id)
+    {
+        $Booking = Contact::find($id);
+        $Booking->read = '0';
+        $Booking->save();
+        return redirect()->back()->with('status', 'Contact Form Details Mark as Read Sucessfully');
+    }
+    public function unread($id)
+    {
+        $Booking = Contact::find($id);
+        $Booking->read = '1';
+        $Booking->save();
+        return redirect()->back()->with('status', 'Contact Form Details Mark as Unreead Sucessfully');
+    }
+    public function delete($id)
+    {
+        $Booking = Contact::find($id);
+        $Booking->delete();
+        return redirect()->back()->with('status', 'Contact Form Details Delete Sucessfully');
     }
 
 }

@@ -7,13 +7,13 @@
                  <div class="widget-content text-center"> 
                     <div class="profile"> 
                        <figure class="avatar"> 
-                          <img src="assets/images/img21.jpg" alt=""> 
+                          <img class="owner-image" src="{{ asset('frontend/assets/images/WhatsApp Image 2023-05-25 at 11.47.23 PM.jpeg') }}" alt=""> 
                        </figure> 
                        <div class="text-content"> 
                           <div class="name-title"> 
-                             <h4> James Watson</h4> 
+                             <h4>Indika Thushani</h4> 
                           </div> 
-                          <p>Accumsan? Aliquet nobis doloremque, aliqua? Inceptos voluptatem, duis tempore optio quae animi viverra distinctio cumque vivamus, earum congue, anim velit</p> 
+                         <p>Hi 👋 I'm Thushani, the tour coordinator. I'm Sri Lankan but living in the UK at the moment. I've got my trustworthy guide team in Sri Lanka who can help you to create your  travel experience precious.</p>
                        </div> 
                        <div class="socialgroup"> 
                           <ul> 
@@ -33,21 +33,18 @@
                     <p>Feel free to contact and<br/> reach us !!</p>
                     <ul>
                        <li>
-                          <a href="tel:+01988256203">
+                          <a href="tel:+447863844411">
                              <i aria-hidden="true" class="icon icon-phone1"></i>
-                             +01(988) 256 203
+                             +44 7863 844411
                           </a>
                        </li>
                        <li>
-                          <a href="mailtop:info@domain.com">
+                          <a href="mailtop:info@seylanodyssey.com">
                              <i aria-hidden="true" class="icon icon-envelope1"></i>
-                             info@domain.com
+                             info@seylanodyssey.com
                           </a>
                        </li>
-                       <li>
-                          <i aria-hidden="true" class="icon icon-map-marker1"></i>
-                          3146 Koontz, California
-                       </li>
+                     
                     </ul>
                  </div>
               </aside>

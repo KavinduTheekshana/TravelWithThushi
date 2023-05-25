@@ -13,15 +13,15 @@
             <div class="page-content">
                 <!--breadcrumb-->
                 <div class="page-breadcrumb d-none d-sm-flex align-items-center mb-3">
-                @section('page_group', 'Bookings')
-                @section('page_name', 'Bookings List')
+                @section('page_group', 'Contact')
+                @section('page_name', 'Contact List')
                 @include('backend.components.breadcrumb')
 
 
-           
+
             </div>
             <!--end breadcrumb-->
-            <h6 class="mb-0 text-uppercase">Your all Booking Details</h6>
+            <h6 class="mb-0 text-uppercase">Your all Contact Form Details</h6>
             <hr />
             @include('backend.components.alert')
             <div class="card">
@@ -31,24 +31,23 @@
                             <thead>
                                 <tr>
 
-                                    <th>Package</th>
-                                    <th>name</th>
-                                    <th>email</th>
-                                    <th>phone</th>
-                                    <th>country</th>
+
+                                    <th>Name</th>
+                                    <th>Email</th>
+                                    <th>comment</th>
+                        
                                     <th>Status</th>
                                     <th>Action</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach ($bookings as $booking)
-                                    <td>{{ $booking->package_name }}</td>
-                                    <td>{{ $booking->name }}</td>
-                                    <td>{{ $booking->email }}</td>
-                                    <td>{{ $booking->phone }}</td>
-                                    <td>{{ $booking->country }}</td>
+                                @foreach ($contacts as $contact)
+                                    <td>{{ $contact->name }}</td>
+                                    <td>{{ $contact->email }}</td>
+                                    <td>{{ $contact->comment }}</td>
+
                                     <td>
-                                        @if ($booking->read)
+                                        @if ($contact->read)
                                             <span class="badge bg-danger">Unread</span></a>
                                         @else
                                             <span class="badge bg-success">Read</span></a>
@@ -60,30 +59,26 @@
                                     <td>
                                         <div class=" table-icon-group">
                                             <button type="button" class="btn btn-dark" data-bs-toggle="modal"
-                                                data-bs-target="#exampleLargeModal" data-status="{{ $booking->read }}"
-                                                data-package_name="{{ $booking->package_name }}"
-                                                data-name="{{ $booking->name }}" data-email="{{ $booking->email }}"
-                                                data-phone="{{ $booking->phone }}"
-                                                data-country="{{ $booking->country }}"
-                                                data-checkin="{{ $booking->checkin }}"
-                                                data-checkout="{{ $booking->checkout }}">
+                                                data-bs-target="#exampleLargeModal" data-status="{{ $contact->read }}"
+                                                data-name="{{ $contact->name }}" data-email="{{ $contact->email }}"
+                                                data-phone="{{ $contact->comment }}">
                                                 <i class="bx bxs-show me-0"></i></button>
 
-                                            @if ($booking->read)
+                                            @if ($contact->read)
                                                 <a title="Mark as read"
-                                                    href="{{ route('booking.read', ['id' => $booking->id]) }}"
+                                                    href="{{ route('contact.read', ['id' => $contact->id]) }}"
                                                     type="button" class="btn btn-success"><i
                                                         class='bx bx-envelope me-0'></i></a>
                                             @else
                                                 <a title="Mark As Unread"
-                                                    href="{{ route('booking.unread', ['id' => $booking->id]) }}"
+                                                    href="{{ route('contact.unread', ['id' => $contact->id]) }}"
                                                     type="button" class="btn btn-danger"><i
                                                         class='bx bx-envelope-open me-0'></i></a>
                                             @endif
 
 
 
-                                            <a href="{{ route('booking.delete', ['id' => $booking->id]) }}"
+                                            <a href="{{ route('contact.delete', ['id' => $contact->id]) }}"
                                                 type="button" class="btn btn-warning"><i
                                                     class='bx bxs-trash-alt me-0'></i></a>
                                         </div>
@@ -94,11 +89,11 @@
                             </tbody>
                             <tfoot>
                                 <tr>
-                                    <th>Package</th>
-                                    <th>name</th>
-                                    <th>email</th>
-                                    <th>phone</th>
-                                    <th>country</th>
+                                    
+                                    <th>Name</th>
+                                    <th>Email</th>
+                                    <th>comment</th>
+                        
                                     <th>Status</th>
                                     <th>Action</th>
                                 </tr>
@@ -132,12 +127,10 @@
     $(document).ready(function() {
         $('#exampleLargeModal').on('show.bs.modal', function(event) {
             var button = $(event.relatedTarget);
-            var title = "-  Inquiry Details: Let's Make There Travel Dreams a Reality!";
+            var title = "-  Contact Form Details";
             var status = button.data('status');
             var description = "<b>Name: </b>" + button.data('name') + "</br>" + "<b>Email: </b>" +
-                button.data('email') + "</br>" + "<b>Phone: </b>" + button.data('phone') + "</br>" +
-                "<b>Country: </b>" + button.data('country') + "</br>" + "<b>Checkin: </b>" + button
-                .data('checkin') + "</br>" + "<b>Checkout: </b>" + button.data('checkout') + "</br>";
+                button.data('email') + "</br>" + "<b>Comment: </b>" + button.data('comment') + "</br>" ;
 
 
 
