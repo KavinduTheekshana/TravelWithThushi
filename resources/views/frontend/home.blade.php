@@ -137,14 +137,13 @@
             </section>
             <!-- ***Home testimonial html end here*** -->
             <!-- ***Home callback html start from here*** -->
-            <section class="home-callback bg-color-callback primary-bg">
+            <section class="home-callback bg-color-callback primary-bg-image" style="background: url({{asset('frontend/assets/images/videobackground.jpg')}}) rgba(0, 0, 0, 0.4)">
                 <div class="container">
                     <div class="row align-items-center">
                         <div class="col-md-8">
-                            <h5 class="sub-title">CALL TO ACTION</h5>
-                            <h2 class="section-title">READY FOR UNFORGATABLE TRAVEL. REMEMBER US!</h2>
-                            <p>Fusce hic augue velit wisi quibusdam pariatur, iusto primis, nec nemo, rutrum. Vestibulum
-                                cumque laudantium. Sit ornare mollitia tenetur, aptent.</p>
+                            <h5 class="sub-title color-white-moody">CALL TO ACTION</h5>
+                            <h2 class="section-title color-white">READY FOR UNFORGATABLE TRAVEL. REMEMBER US!</h2>
+                            <p class="color-white-moody">Unforgettable travel awaits! Remember us as your ultimate destination for incredible experiences. Get ready to embark on a journey that will leave a lasting impression. Buckle up and let us take you on a ride you'll never forget!</p>
                         </div>
                         <div class="col-md-4 text-md-end">
                             <a href="contact.html" class="outline-btn outline-btn-white">Contact Us !</a>

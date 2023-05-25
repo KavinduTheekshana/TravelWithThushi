@@ -1,122 +1,129 @@
  <!-- ***site footer html start form here*** -->
  <footer id="colophon" class="site-footer footer-primary">
-    <div class="top-footer">
-       <div class="container">
-          <div class="upper-footer">
-             <div class="row">
-                <div class="col-lg-3 col-sm-6">
-                   <aside class="widget widget_text">
-                      <div class="footer-logo">
-                         <a href="index.html"><img src="assets/images/site-logo.png" alt=""></a>
-                      </div>
-                      <div class="textwidget widget-text">
-                         Urna ratione ante harum provident, eleifend, vulputate molestiae proin fringilla, praesentium magna conubia at perferendis, pretium, aenean aut ultrices.
-                      </div>
-                   </aside>
-                </div>
-                <div class="col-lg-3 col-sm-6">
-                   <aside class="widget widget_latest_post widget-post-thumb">
-                      <h3 class="widget-title">RECENT POST</h3>
-                      <ul>
-                         <li>
-                            <figure class="post-thumb">
-                               <a href="blog-archive.html"><img src="assets/images/img21.jpg" alt=""></a>
-                            </figure>
-                            <div class="post-content">
-                               <h6>
-                                  <a href="blog-single.html">BEST JOURNEY TO PEACEFUL PLACES</a>
-                               </h6>
-                               <div class="entry-meta">
-                                  <span class="posted-on">
-                                     <a href="blog-archive.html">February 17, 2022</a>
-                                  </span>
-                               </div>
-                            </div>
-                         </li>
-                         <li>
-                            <figure class="post-thumb">
-                               <a href="blog-archive.html"><img src="assets/images/img22.jpg" alt=""></a>
-                            </figure>
-                            <div class="post-content">
-                               <h6>
-                                  <a href="blog-single.html">TRAVEL WITH FRIENDS IS BEST</a>
-                               </h6>
-                               <div class="entry-meta">
-                                  <span class="posted-on">
-                                     <a href="blog-archive.html">February 17, 2022</a>
-                                  </span>
-                               </div>
-                            </div>
-                         </li>
-                      </ul>
-                   </aside>
-                </div>
-                <div class="col-lg-3 col-sm-6">
-                   <aside class="widget widget_text">
-                      <h3 class="widget-title">CONTACT US</h3>
-                      <div class="textwidget widget-text">
-                         <p>Feel free to contact and<br/> reach us !!</p>
-                         <ul>
-                            <li>
-                               <a href="tel:+01988256203">
-                                  <i aria-hidden="true" class="icon icon-phone1"></i>
-                                  +01(988) 256 203
-                               </a>
-                            </li>
-                            <li>
-                               <a href="mailtop:info@domain.com">
-                                  <i aria-hidden="true" class="icon icon-envelope1"></i>
-                                  info@domain.com
-                               </a>
-                            </li>
-                            <li>
-                               <i aria-hidden="true" class="icon icon-map-marker1"></i>
-                               3146 Koontz, California
-                            </li>
-                         </ul>
-                      </div>
-                   </aside>
-                </div>
-                <div class="col-lg-3 col-sm-6">
-                   <aside class="widget">
-                      <h3 class="widget-title">Gallery</h3>
-                      <div class="gallery gallery-colum-3">
-                         <figure class="gallery-item">
-                            <a href="assets/images/img10.jpg" data-fancybox="gallery-1">
-                               <img src="assets/images/img21.jpg" alt="">
-                            </a>
-                         </figure>
-                         <figure class="gallery-item">
-                            <a href="assets/images/img28.jpg" data-fancybox="gallery-1">
-                               <img src="assets/images/img22.jpg" alt="">
-                            </a>
-                         </figure>
-                         <figure class="gallery-item">
-                            <a href="assets/images/img14.jpg" data-fancybox="gallery-1">
-                               <img src="assets/images/img23.jpg" alt="">
-                            </a>
-                         </figure>
-                         <figure class="gallery-item">
-                            <a href="assets/images/img15.jpg" data-fancybox="gallery-1">
-                               <img src="assets/images/img24.jpg" alt="">
-                            </a>
-                         </figure>
-                         <figure class="gallery-item">
-                            <a href="assets/images/img12.jpg" data-fancybox="gallery-1">
-                               <img src="assets/images/img25.jpg" alt="">
-                            </a>
-                         </figure>
-                         <figure class="gallery-item">
-                            <a href="assets/images/img13.jpg" data-fancybox="gallery-1">
-                               <img src="assets/images/img26.jpg" alt="">
-                            </a>
-                         </figure>
-                      </div>
-                   </aside>
-                </div>
+     <div class="top-footer">
+         <div class="container">
+             <div class="upper-footer">
+                 <div class="row">
+                     <div class="col-lg-3 col-sm-6">
+                         <aside class="widget widget_text">
+                             <div class="footer-logo">
+                                 <a href="index.html"><img src="{{ asset('frontend/assets/images/seylanodyssey.png') }}"
+                                         alt=""></a>
+                             </div>
+                             <div class="textwidget widget-text">
+                                 Welcome to our travel website! With over 14 years of experience in organizing
+                                 unforgettable tours, we are dedicated to providing you with an exceptional travel
+                                 experience in Sri Lanka.
+                             </div>
+                         </aside>
+                     </div>
+                     <div class="col-lg-3 col-sm-6">
+                         <aside class="widget widget_latest_post widget-post-thumb">
+                             <h3 class="widget-title">RECENT POST</h3>
+                             <ul>
+                                 <li>
+                                     <figure class="post-thumb">
+                                         <a href="blog-archive.html"><img src="assets/images/img21.jpg"
+                                                 alt=""></a>
+                                     </figure>
+                                     <div class="post-content">
+                                         <h6>
+                                             <a href="blog-single.html">BEST JOURNEY TO PEACEFUL PLACES</a>
+                                         </h6>
+                                         <div class="entry-meta">
+                                             <span class="posted-on">
+                                                 <a href="blog-archive.html">February 17, 2022</a>
+                                             </span>
+                                         </div>
+                                     </div>
+                                 </li>
+                                 <li>
+                                     <figure class="post-thumb">
+                                         <a href="blog-archive.html"><img src="assets/images/img22.jpg"
+                                                 alt=""></a>
+                                     </figure>
+                                     <div class="post-content">
+                                         <h6>
+                                             <a href="blog-single.html">TRAVEL WITH FRIENDS IS BEST</a>
+                                         </h6>
+                                         <div class="entry-meta">
+                                             <span class="posted-on">
+                                                 <a href="blog-archive.html">February 17, 2022</a>
+                                             </span>
+                                         </div>
+                                     </div>
+                                 </li>
+                             </ul>
+                         </aside>
+                     </div>
+                     <div class="col-lg-3 col-sm-6">
+                         <aside class="widget widget_text">
+                             <h3 class="widget-title">CONTACT US</h3>
+                             <div class="textwidget widget-text">
+                                 <p>Feel free to contact and<br /> reach us !!</p>
+                                 <ul>
+                                     <li>
+                                         <a href="tel:+01988256203">
+                                             <i aria-hidden="true" class="icon icon-phone1"></i>
+                                             +44 7863 844411
+                                         </a>
+                                     </li>
+                                     <li>
+                                         <a href="mailtop:info@domain.com">
+                                             <i aria-hidden="true" class="icon icon-envelope1"></i>
+                                             info@seylanodyssey.com
+                                         </a>
+                                     </li>
+                                     <li>
+                                         <i aria-hidden="true" class="icon icon-map-marker1"></i>
+                                         Bryanstone Road,
+                                         Waltham Cross,
+                                         United Kingdom
+                                     </li>
+                                 </ul>
+                             </div>
+                         </aside>
+                     </div>
+                     <div class="col-lg-3 col-sm-6">
+                         <aside class="widget">
+                             <h3 class="widget-title">Gallery</h3>
+                             <div class="gallery gallery-colum-3">
+                                 <figure class="gallery-item">
+                                     <a href="assets/images/img10.jpg" data-fancybox="gallery-1">
+                                         <img src="assets/images/img21.jpg" alt="">
+                                     </a>
+                                 </figure>
+                                 <figure class="gallery-item">
+                                     <a href="assets/images/img28.jpg" data-fancybox="gallery-1">
+                                         <img src="assets/images/img22.jpg" alt="">
+                                     </a>
+                                 </figure>
+                                 <figure class="gallery-item">
+                                     <a href="assets/images/img14.jpg" data-fancybox="gallery-1">
+                                         <img src="assets/images/img23.jpg" alt="">
+                                     </a>
+                                 </figure>
+                                 <figure class="gallery-item">
+                                     <a href="assets/images/img15.jpg" data-fancybox="gallery-1">
+                                         <img src="assets/images/img24.jpg" alt="">
+                                     </a>
+                                 </figure>
+                                 <figure class="gallery-item">
+                                     <a href="assets/images/img12.jpg" data-fancybox="gallery-1">
+                                         <img src="assets/images/img25.jpg" alt="">
+                                     </a>
+                                 </figure>
+                                 <figure class="gallery-item">
+                                     <a href="assets/images/img13.jpg" data-fancybox="gallery-1">
+                                         <img src="assets/images/img26.jpg" alt="">
+                                     </a>
+                                 </figure>
+                             </div>
+                         </aside>
+                     </div>
+                 </div>
              </div>
-          </div>
-          <div class="lower-footer">
+             {{-- <div class="lower-footer">
              <div class="row align-items-center">
                 <div class="col-lg-6">
                    <div class="footer-newsletter">
@@ -172,13 +179,14 @@
                    </div>
                 </div>
              </div>
-          </div>
-       </div>
-    </div>
-    <div class="bottom-footer">
-       <div class="container">
-          <div class="copy-right text-center">Copyright &copy; 2022 Traveler. All rights reserved.</div>
-       </div>
-    </div>
+          </div> --}}
+         </div>
+     </div>
+     <div class="bottom-footer">
+         <div class="container">
+             <div class="copy-right text-center">Copyright &copy; {{ now()->year }} Seylan Odyssey | Developed By: <a
+                     href="creatxsoftware.com">Creatx Software</a></div>
+         </div>
+     </div>
  </footer>
  <!-- ***site footer html end*** -->

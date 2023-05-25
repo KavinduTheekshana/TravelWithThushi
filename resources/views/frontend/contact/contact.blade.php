@@ -64,18 +64,21 @@
                   </div>
                   <div class="col-lg-6" data-animscroll="fade-left" data-animscroll-delay="100">
                      <div class="contact-from-wrap primary-bg">
-                        <form method="get" class="contact-from">
+                          {{-- <form method="POST" action="{{ route('contact.save') }}" class="contact-from" enctype="multipart/form-data">
+                                        @csrf --}}
+                        <form id="contactForm" class="contact-from">
+                           @csrf
                            <p>
                               <label>First Name..</label>
-                              <input type="text" name="name" placeholder="Your Name*">
+                              <input type="text" id="name" name="name" placeholder="Your Name*">
                            </p>
                            <p>
                               <label>Email Address</label>
-                              <input type="email" name="email" placeholder="Your Email*">
+                              <input type="email" id="email" name="email" placeholder="Your Email*">
                            </p>
                            <p>
                               <label>Comments / Questions</label>
-                              <textarea rows="8" placeholder="Your Message*"></textarea>
+                              <textarea rows="8" id="comment" name="comment" placeholder="Your Message*"></textarea>
                            </p>
                            <p>
                               <input type="submit" name="submit" value="SUBMIT MESSAGE">
@@ -180,3 +183,44 @@
 </div>
 
 @endsection
+
+
+@push('scripts')
+<script>
+    $(document).ready(function() {
+        $('#contactForm').on('submit', function(event) {
+            event.preventDefault();
+
+            var formData = $(this).serialize();
+
+            $.ajax({
+                url: '{{ route('contact.save') }}',
+                method: 'POST',
+                data: formData,
+                success: function(response) {
+
+                    
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Success!',
+                        text: response.success
+                    });
+                    $('#name').val('');
+                    $('#email').val('');
+                    $('#comment').val('');
+
+                },
+                error: function(xhr) {
+                    // Handle error response
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Oops...',
+                        text: 'Something went wrong!'
+                    });
+
+                }
+            });
+        });
+    });
+</script>
+@endpush

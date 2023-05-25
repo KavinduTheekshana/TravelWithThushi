@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\BookingController;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\DashboardController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
@@ -33,6 +34,9 @@ Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
 
 // Booking Routs 
 Route::post('/booking/send', [BookingController::class, 'save'])->name('booking.send');
+
+//contact us form
+Route::post('/contact/save', [ContactController::class, 'save'])->name('contact.save');
 
 
 // Auth Routs 
