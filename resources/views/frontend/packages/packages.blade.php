@@ -20,7 +20,7 @@
                </div>
             </div>
    
-            @include('frontend.components.partners')
+            @include('frontend.components.discount')
             </section>
          </main>
       
