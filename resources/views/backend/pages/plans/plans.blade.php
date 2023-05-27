@@ -160,7 +160,7 @@
             "<b>What kind of holiday they like: </b>" + button.data('holiday') + "<hr>" +
             "<b>What they like to see: </b>" + button.data('like_to_see') + "<hr>" +
             "<b>Which activities they like: </b>" + button.data('activities') + "<hr>" +
-            "<b>vehicle: </b>" + button.data('vehicle') + "<hr>" +
+            "<b>vehicle Type: </b>" + button.data('vehicle') + "<hr>" +
             "<b>Special Note: </b>" + button.data('note') + "<hr>";
 
 

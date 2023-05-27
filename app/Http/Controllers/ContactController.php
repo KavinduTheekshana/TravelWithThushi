@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\ContactForm;
 use App\Models\Contact;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -27,7 +28,7 @@ class ContactController extends Controller
     
         // Send the email
         $formData = $request->all();
-        // Mail::to('kavindutheekshana@gmail.com')->send(new BookingInquiry($formData));
+        Mail::to('kavindutheekshana@gmail.com')->send(new ContactForm($formData));
 
         return response()->json(['success' => 'Your Message Sent Sucessfully']);
     }

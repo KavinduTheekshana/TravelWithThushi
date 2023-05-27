@@ -24,7 +24,7 @@
                                 {{-- <form method="POST" action="{{ route('plan.save') }}" class="contact-from"
                                     enctype="multipart/form-data">
                                     @csrf --}}
-                                    <form id="planForm" class="contact-from">
+                                <form id="planForm" class="contact-from">
                                     @csrf
                                     <p>
                                         <label>Your Name <sup>*</sup></label>
@@ -230,70 +230,72 @@
                                     <hr class="white-hr">
                                     <p>
                                         <label> <b> Which activities do you like?</b></label>
-                                        <div class="form-check form-check-inline">
-                                            <input class="form-check-input" name="activity[]" type="checkbox"
-                                                id="inlineCheckbox1" value="Wildlife safari">
-                                            <label class="form-check-label" for="inlineCheckbox1">Wildlife safari</label>
-                                        </div>
-                                        <div class="form-check form-check-inline">
-                                            <input class="form-check-input" name="activity[]" type="checkbox"
-                                                id="inlineCheckbox1" value="Cultural experience">
-                                            <label class="form-check-label" for="inlineCheckbox1">Cultural experience</label>
-                                        </div>
-                                        <div class="form-check form-check-inline">
-                                            <input class="form-check-input" name="activity[]" type="checkbox"
-                                                id="inlineCheckbox1" value="Bird watching">
-                                            <label class="form-check-label" for="inlineCheckbox1">Bird watching</label>
-                                        </div>
-                                        <div class="form-check form-check-inline">
-                                            <input class="form-check-input" name="activity[]" type="checkbox"
-                                                id="inlineCheckbox1" value="Water rafting">
-                                            <label class="form-check-label" for="inlineCheckbox1">Water rafting</label>
-                                        </div>
-                                        <div class="form-check form-check-inline">
-                                            <input class="form-check-input" name="activity[]" type="checkbox"
-                                                id="inlineCheckbox1" value="Surfing">
-                                            <label class="form-check-label" for="inlineCheckbox1">Surfing</label>
-                                        </div>
-                                        <div class="form-check form-check-inline">
-                                            <input class="form-check-input" name="activity[]" type="checkbox"
-                                                id="inlineCheckbox1" value="Boat safari">
-                                            <label class="form-check-label" for="inlineCheckbox1">Boat safari</label>
-                                        </div>
-                                        <div class="form-check form-check-inline">
-                                            <input class="form-check-input" name="activity[]" type="checkbox"
-                                                id="inlineCheckbox1" value="Swimming">
-                                            <label class="form-check-label" for="inlineCheckbox1">Swimming</label>
-                                        </div>
-                                        <div class="form-check form-check-inline">
-                                            <input class="form-check-input" name="activity[]" type="checkbox"
-                                                id="inlineCheckbox1" value="Elephant watching">
-                                            <label class="form-check-label" for="inlineCheckbox1">Elephant watching</label>
-                                        </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" name="activity[]" type="checkbox"
+                                            id="inlineCheckbox1" value="Wildlife safari">
+                                        <label class="form-check-label" for="inlineCheckbox1">Wildlife safari</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" name="activity[]" type="checkbox"
+                                            id="inlineCheckbox1" value="Cultural experience">
+                                        <label class="form-check-label" for="inlineCheckbox1">Cultural
+                                            experience</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" name="activity[]" type="checkbox"
+                                            id="inlineCheckbox1" value="Bird watching">
+                                        <label class="form-check-label" for="inlineCheckbox1">Bird watching</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" name="activity[]" type="checkbox"
+                                            id="inlineCheckbox1" value="Water rafting">
+                                        <label class="form-check-label" for="inlineCheckbox1">Water rafting</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" name="activity[]" type="checkbox"
+                                            id="inlineCheckbox1" value="Surfing">
+                                        <label class="form-check-label" for="inlineCheckbox1">Surfing</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" name="activity[]" type="checkbox"
+                                            id="inlineCheckbox1" value="Boat safari">
+                                        <label class="form-check-label" for="inlineCheckbox1">Boat safari</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" name="activity[]" type="checkbox"
+                                            id="inlineCheckbox1" value="Swimming">
+                                        <label class="form-check-label" for="inlineCheckbox1">Swimming</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" name="activity[]" type="checkbox"
+                                            id="inlineCheckbox1" value="Elephant watching">
+                                        <label class="form-check-label" for="inlineCheckbox1">Elephant
+                                            watching</label>
+                                    </div>
                                     </p>
                                     <hr class="white-hr">
                                     <p>
                                         <label> <b> Type of Vehicle</b></label>
-                                        <div class="form-check form-check-inline">
-                                            <input class="form-check-input" name="vehicle[]" type="checkbox"
-                                                id="inlineCheckbox1" value="Economy">
-                                            <label class="form-check-label" for="inlineCheckbox1">Economy</label>
-                                        </div>
-                                        <div class="form-check form-check-inline">
-                                            <input class="form-check-input" name="vehicle[]" type="checkbox"
-                                                id="inlineCheckbox1" value="Semi Luxury">
-                                            <label class="form-check-label" for="inlineCheckbox1">Semi Luxury</label>
-                                        </div>
-                                        <div class="form-check form-check-inline">
-                                            <input class="form-check-input" name="vehicle[]" type="checkbox"
-                                                id="inlineCheckbox1" value="Luxury">
-                                            <label class="form-check-label" for="inlineCheckbox1">Luxury</label>
-                                        </div>
-                                        <div class="form-check form-check-inline">
-                                            <input class="form-check-input" name="vehicle[]" type="checkbox"
-                                                id="inlineCheckbox1" value="Super Luxury">
-                                            <label class="form-check-label" for="inlineCheckbox1">Super Luxury</label>
-                                        </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" name="vehicle[]" type="checkbox"
+                                            id="inlineCheckbox1" value="Economy">
+                                        <label class="form-check-label" for="inlineCheckbox1">Economy</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" name="vehicle[]" type="checkbox"
+                                            id="inlineCheckbox1" value="Semi Luxury">
+                                        <label class="form-check-label" for="inlineCheckbox1">Semi Luxury</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" name="vehicle[]" type="checkbox"
+                                            id="inlineCheckbox1" value="Luxury">
+                                        <label class="form-check-label" for="inlineCheckbox1">Luxury</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" name="vehicle[]" type="checkbox"
+                                            id="inlineCheckbox1" value="Super Luxury">
+                                        <label class="form-check-label" for="inlineCheckbox1">Super Luxury</label>
+                                    </div>
                                     </p>
                                     <hr class="white-hr">
                                     <p>
@@ -357,15 +359,13 @@
                 data: formData,
                 success: function(response) {
 
-                    
+
                     Swal.fire({
                         icon: 'success',
                         title: 'Success!',
                         text: response.success
                     });
-                    // $('#name').val('');
-                    // $('#email').val('');
-                    // $('#comment').val('');
+                    $('#planForm')[0].reset();
 
                 },
                 error: function(xhr) {
