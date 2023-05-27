@@ -9,6 +9,7 @@ use App\Http\Controllers\DestinationsController;
 use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\PackageDetailsController;
 use App\Http\Controllers\PackagesController;
+use App\Http\Controllers\PlanController;
 use App\Http\Controllers\TestimonialController;
 use Illuminate\Support\Facades\Auth;
 /*
@@ -32,9 +33,13 @@ Route::get('/packages/{slug}', [HomeController::class, 'single_package'])->name(
 Route::get('/about', [HomeController::class, 'about'])->name('about');
 Route::get('/gallery', [HomeController::class, 'gallery'])->name('gallery');
 Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
+Route::get('/plan', [HomeController::class, 'plan'])->name('plan');
 
 // Booking Routs 
 Route::post('/booking/send', [BookingController::class, 'save'])->name('booking.send');
+
+// Booking Routs 
+Route::post('/plan/save', [PlanController::class, 'save'])->name('plan.save');
 
 //contact us form
 Route::post('/contact/save', [ContactController::class, 'save'])->name('contact.save');
@@ -116,3 +121,12 @@ Route::post('/save-testimonial', [TestimonialController::class, 'save'])->name('
 Route::get('/testimonial-active/{id}', [TestimonialController::class, 'active'])->name('testimonial.active');
 Route::get('/testimonial-diactive/{id}', [TestimonialController::class, 'diactive'])->name('testimonial.diactive');
 Route::get('/testimonial-delete/{id}', [TestimonialController::class, 'delete'])->name('testimonial.delete');
+
+
+// Tour Plans Back End 
+Route::middleware('auth')->group(function () {
+    Route::get('/plan-list', [PlanController::class, 'list'])->name('plan.list');
+    Route::get('/plan-read/{id}', [PlanController::class, 'read'])->name('plan.read');
+    Route::get('/plan-unread/{id}', [PlanController::class, 'unread'])->name('plan.unread');
+    Route::get('/plan-delete/{id}', [PlanController::class, 'delete'])->name('plan.delete');
+});

@@ -1,6 +1,7 @@
   <!-- ***home banner html start form here*** -->
   <section class="home-banner-section home-banner-slider">
-    <div class="home-banner d-flex flex-wrap align-items-center" style="background-image: url({{url('frontend/assets/images/Leopard-srilanka-Getty.jpg')}});">
+   <div class="home-banner d-flex flex-wrap align-items-center" style="background-image: url({{url('frontend/assets/images/puresurfcamps-worldwide-surfschule-sri-lanka.jpg')}});">
+
        <div class="overlay"></div>
        <div class="container">
           <div class="banner-content text-center">
@@ -12,7 +13,7 @@
           </div>
        </div>
     </div>
-    <div class="home-banner d-flex flex-wrap align-items-center" style="background-image: url({{url('frontend/assets/images/puresurfcamps-worldwide-surfschule-sri-lanka.jpg')}});">
+    <div class="home-banner d-flex flex-wrap align-items-center" style="background-image: url({{url('frontend/assets/images/Leopard-srilanka-Getty.jpg')}});">
        <div class="overlay"></div>
        <div class="container">
           <div class="banner-content text-center">

@@ -42,6 +42,14 @@ class HomeController extends Controller
         return view('frontend.gallery.gallery', ['gallery' => $gallery, 'gallery_footer' => $gallery_footer, 'packages_footer' => $packages_footer]);
     }
 
+    public function plan()
+    {
+        $gallery = DB::table('galleries')->where('status', 1)->whereNull('deleted_at')->get();
+        $gallery_footer = DB::table('galleries')->where('status', 1)->whereNull('deleted_at')->take(6)->get();
+        $packages_footer = DB::table('packages')->where('status', 1)->where('popular_status', 1)->whereNull('deleted_at')->take(2)->get();
+        return view('frontend.plan.plan', ['gallery' => $gallery, 'gallery_footer' => $gallery_footer, 'packages_footer' => $packages_footer]);
+    }
+
     public function single_destination($slug)
     {
         $gallery_footer = DB::table('galleries')->where('status', 1)->whereNull('deleted_at')->take(6)->get();

@@ -101,7 +101,7 @@
             </li>
 
             <li>
-                <a href="{{ route('bookings.list') }}">
+                <a href="{{ route('plan.list') }}">
                     <div class="parent-icon"><i class='bx bx-paper-plane' ></i>
                     </div>
                     <div class="menu-title">Tour Plans</div>

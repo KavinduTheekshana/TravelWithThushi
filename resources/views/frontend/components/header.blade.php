@@ -35,17 +35,17 @@
              <div class="header-social social-icon">
                 <ul>
                    <li>
-                      <a href="https://www.facebook.com" target="_blank">
+                      <a href="#" target="_blank">
                          <i class="fab fa-facebook-f" aria-hidden="true"></i>
                       </a>
                    </li>
                    <li>
-                      <a href="https://www.twitter.com" target="_blank">
+                      <a href="#" target="_blank">
                          <i class="fab fa-twitter" aria-hidden="true"></i>
                       </a>
                    </li>
                    <li>
-                      <a href="https://www.youtube.com" target="_blank">
+                      <a href="#" target="_blank">
                          <i class="fab fa-youtube" aria-hidden="true"></i>
                       </a>
                    </li>
@@ -58,14 +58,14 @@
                          <a href="{{ route('/') }}">Home</a>
                       </li>
                       <li class="{{ request()->is('about') ? 'menu-active' : '' }}">
-                         <a href="{{ route('about') }}">about us</a>
+                         <a href="{{ route('about') }}">About us</a>
                       </li>
                       <li class="{{ Request::segment(1) === 'destinations' ? 'menu-active' : null }}">
-                         <a href="{{ route('destinations.all') }}">destination</a>
+                         <a href="{{ route('destinations.all') }}">Destination</a>
                       </li>
 
                       <li class="{{ Request::segment(1) === 'packages' ? 'menu-active' : null }}">
-                        <a href="{{ route('packages.all') }}">packages</a>
+                        <a href="{{ route('packages.all') }}">Packages</a>
                      </li>
                      <li class="{{ request()->is('gallery') ? 'menu-active' : '' }}">
                         <a href="{{ route('gallery') }}">Gallery</a>
@@ -80,7 +80,7 @@
                 </nav>
              </div>
              <div class="header-btn">
-                <a href="booking.html" class="round-btn">Plan a Tour</a>
+                <a href="{{ route('plan') }}" class="round-btn">Plan a Tour</a>
              </div>
           </div>
        </div>

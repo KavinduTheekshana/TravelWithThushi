@@ -1153,6 +1153,31 @@ input[type="submit"]:focus {
     height: 100px;
     object-fit: cover;
 }
+.plan-gallery img{
+    border-radius: 0px !important;
+}
+.selectWrapper{
+    width: 100%;
+    border-radius:25px;
+  display:inline-block;
+  overflow:hidden;
+  background:#cccccc;
+  border:1px solid #cccccc;
+}
+.selectWrapper select{
+    width: 100%;
+    background-color: #f8f8f8;
+border: 1px solid #d9d9d9;
+-webkit-border-radius: 25px;
+-moz-border-radius: 25px;
+-ms-border-radius: 25px;
+border-radius: 25px;
+font-size: 14px;
+padding: 0 15px;
+}
+.white-hr{
+    color: aliceblue;
+}
 .section-heading {
     margin-bottom: 45px;
 }
