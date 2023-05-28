@@ -29,7 +29,7 @@
     <link href="{{ asset('backend/assets/css/header-colors.css') }}" rel="stylesheet">
 
     <title>Seylan Odyssey</title>
-    {{-- @vite('resources/js/app.js') --}}
+
 </head>
 
 <body>

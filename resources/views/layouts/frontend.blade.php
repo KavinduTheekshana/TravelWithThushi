@@ -39,7 +39,7 @@
     <link rel="stylesheet" href="{{ asset('frontend/assets/plugin/animtrap/css/animtrap.min.css') }}">
 
     <title>Seylan Odyssey | I help you to enjoy your journey</title>
-    @vite('resources/js/app.js')
+
 </head>
 
 <body class="home">
