@@ -15,6 +15,9 @@
     @include('backend.components.header')
 
 
+    @include('backend.dashboard.components')
+
+
 
 
     @include('backend.components.footer')
