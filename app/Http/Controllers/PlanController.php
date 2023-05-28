@@ -77,7 +77,7 @@ class PlanController extends Controller
             'note' => $request->input('note'),
         ];
     
-        Mail::to('kavindutheekshana@gmail.com')->send(new PlanTour($formData));
+        Mail::to('thushaniwerahera@gmail.com')->send(new PlanTour($formData));
 
     
     

@@ -39,7 +39,7 @@ class BookingController extends Controller
     
         // Send the email
         $formData = $request->all();
-        Mail::to('kavindutheekshana@gmail.com')->send(new BookingInquiry($formData));
+        Mail::to('thushaniwerahera@gmail.com')->send(new BookingInquiry($formData));
 
         return response()->json(['success' => 'Your Inquiry Sent Sucessfully']);
     }
