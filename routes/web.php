@@ -11,6 +11,7 @@ use App\Http\Controllers\PackageDetailsController;
 use App\Http\Controllers\PackagesController;
 use App\Http\Controllers\PlanController;
 use App\Http\Controllers\TestimonialController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Auth;
 /*
 |--------------------------------------------------------------------------
@@ -46,7 +47,14 @@ Route::post('/contact/save', [ContactController::class, 'save'])->name('contact.
 
 
 // Auth Routs 
-Auth::routes(['register' => false]);
+// Auth::routes(['register' => false]);
+Auth::routes();
+
+// User Profile Routes 
+Route::get('/profile', [UserController::class, 'view'])->name('profile');
+Route::post('/profile-details-save', [UserController::class, 'details'])->name('profile.save.details');
+Route::post('/profile-password-save', [UserController::class, 'password'])->name('profile.save.password');
+Route::post('/profile-picture-save', [UserController::class, 'picture'])->name('profile.save.picture');
 
 // Dashboard 
 Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');

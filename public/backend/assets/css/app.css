@@ -46,6 +46,17 @@ a {
 	object-fit: cover;
 	border-radius: 100%;
 }
+.dashboard_icon_size{
+	font-size: 30px;
+}
+.user-profile-round{
+	width: 150px !important;
+	height: 150px !important;
+	object-fit: cover;
+}
+.object-fit-cover{
+	object-fit: cover !important;
+}
 .btn-purple{
 	background-color: #6f42c1;
 	color: #fff;

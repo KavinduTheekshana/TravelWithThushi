@@ -68,10 +68,12 @@
                                         </td>
                                         <td>
                                             @if ($destination->popular_status)
-                                                <a href="{{ route('destinations.notpopular', ['id' => $destination->id]) }}" type="button"
-                                                    class="btn btn-secondary px-2 py-1">Remove Popular</a>
+                                                <a href="{{ route('destinations.notpopular', ['id' => $destination->id]) }}"
+                                                    type="button" class="btn btn-secondary px-2 py-1">Remove
+                                                    Popular</a>
                                             @else
-                                                <a href="{{ route('destinations.popular', ['id' => $destination->id]) }}" type="button" class="btn btn-purple"> Make
+                                                <a href="{{ route('destinations.popular', ['id' => $destination->id]) }}"
+                                                    type="button" class="btn btn-purple"> Make
                                                     Popular</a>
                                             @endif
 
@@ -100,10 +102,12 @@
                                                 @endif
 
 
-                                                <a href="{{ route('destinations.update_view', ['id' => $destination->id]) }}" type="button"
-                                                    class="btn btn-primary"><i class='bx bxs-edit me-0'></i></a>
-                                                <a href="{{ route('destinations.delete', ['id' => $destination->id]) }}" type="button"
-                                                    class="btn btn-warning"><i class='bx bxs-trash-alt me-0'></i></a>
+                                                <a href="{{ route('destinations.update_view', ['id' => $destination->id]) }}"
+                                                    type="button" class="btn btn-primary"><i
+                                                        class='bx bxs-edit me-0'></i></a>
+                                                <a href="{{ route('destinations.delete', ['id' => $destination->id]) }}"
+                                                    type="button" class="btn btn-warning"><i
+                                                        class='bx bxs-trash-alt me-0'></i></a>
                                             </div>
                                         </td>
                                     </tr>
