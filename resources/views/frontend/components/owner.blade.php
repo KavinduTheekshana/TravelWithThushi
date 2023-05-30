@@ -17,10 +17,10 @@
                        </div> 
                        <div class="socialgroup"> 
                           <ul> 
-                             <li> <a target="_blank" href="#"> <i class="fab fa-facebook"></i> </a> </li> 
+                             <li> <a target="_blank" href="https://www.facebook.com/profile.php?id=100093226444158&mibextid=ZbWKwL"> <i class="fab fa-facebook"></i> </a> </li> 
                              {{-- <li> <a target="_blank" href="#"> <i class="fab fa-google"></i> </a> </li>  --}}
-                             <li> <a target="_blank" href="#"> <i class="fab fa-twitter"></i> </a> </li> 
-                             <li> <a target="_blank" href="#"> <i class="fab fa-instagram"></i> </a> </li> 
+                             {{-- <li> <a target="_blank" href="#"> <i class="fab fa-twitter"></i> </a> </li>  --}}
+                             <li> <a target="_blank" href="https://instagram.com/ithushani?igshid=ZGUzMzM3NWJiOQ=="> <i class="fab fa-instagram"></i> </a> </li> 
                              {{-- <li> <a target="_blank" href="#"> <i class="fab fa-pinterest"></i> </a> </li>  --}}
                           </ul> 
                        </div> 
