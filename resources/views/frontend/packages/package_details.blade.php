@@ -69,7 +69,7 @@
                             @foreach ($package_details as $key => $details)
                                 <div class="package-content-detail">
                                     <article class="package-overview">
-                                        <h3 data-animscroll="fade-up" data-animscroll-delay="{{$key*100}}" class="m-0"><span class="color-theme"> {{ $details->day }} </span>| {{ $details->title }}</h3>
+                                        <h3 data-animscroll="fade-up" data-animscroll-delay="{{$key*100}}" class="m-0"><span class="color-theme">DAY {{ $details->day }} </span>| {{ $details->title }}</h3>
                                         <h6 data-animscroll="fade-up" data-animscroll-delay="{{$key*100}}">- {{ $details->location }}</h6>
                                         <img data-animscroll="fade-up" data-animscroll-delay="{{$key*100}}" src="{{ asset($details->image) }}" alt="">
                                         <p data-animscroll="fade-up" data-animscroll-delay="{{$key*100}}"> {!! $details->description !!}</p>
