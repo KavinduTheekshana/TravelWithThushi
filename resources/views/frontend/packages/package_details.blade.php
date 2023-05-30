@@ -27,12 +27,12 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="package-price">
+                                {{-- <div class="package-price">
                                     <h6 class="price-list">
                                         <span>${{ $package->price }}</span>
                                         / per person
                                     </h6>
-                                </div>
+                                </div> --}}
                             </div>
                             <div class="package-meta" data-animscroll="fade-up">
                                 <ul>
