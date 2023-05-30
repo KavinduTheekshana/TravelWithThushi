@@ -27,7 +27,7 @@
     </div>
     <div class="package-price">
        <div class="review-area">
-          <span class="review-text">({{ $package->peoples }} reviews)</span>
+          <span class="review-text">({{ $package->days }} reviews)</span>
           <div class="rating-start-wrap d-inline-block">
              <div class="rating-start">
                 <span style="width: 100%"></span>
