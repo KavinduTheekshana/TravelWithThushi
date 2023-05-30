@@ -72,7 +72,7 @@
 
                                     <div class="form-row">
                                         <label for="input1" class="form-label">Peoples</label>
-                                        <input type="number" class="form-control" name="peoples" required
+                                        <input type="text" class="form-control" name="peoples" required
                                             placeholder="Peoples" value="{{ $package->peoples }}">
                                     </div>
 
