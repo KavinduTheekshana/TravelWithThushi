@@ -75,11 +75,11 @@
                                             placeholder="Peoples">
                                     </div>
 
-                                    <div class="form-row">
+                                    {{-- <div class="form-row">
                                         <label for="input1" class="form-label">Price Per Person (USD)</label>
                                         <input type="number" class="form-control" name="price" required
                                             placeholder="Price">
-                                    </div>
+                                    </div> --}}
 
 
 

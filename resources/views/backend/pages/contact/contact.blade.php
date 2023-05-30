@@ -61,7 +61,7 @@
                                             <button type="button" class="btn btn-dark" data-bs-toggle="modal"
                                                 data-bs-target="#exampleLargeModal" data-status="{{ $contact->read }}"
                                                 data-name="{{ $contact->name }}" data-email="{{ $contact->email }}"
-                                                data-phone="{{ $contact->comment }}">
+                                                data-comment="{{ $contact->comment }}">
                                                 <i class="bx bxs-show me-0"></i></button>
 
                                             @if ($contact->read)

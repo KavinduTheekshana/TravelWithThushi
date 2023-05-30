@@ -34,10 +34,11 @@
              </div>
           </div>
        </div>
-       <h6 class="price-list">
+       <br>
+       {{-- <h6 class="price-list">
           <span>${{ $package->price }}</span>
           / per person
-       </h6>
+       </h6> --}}
        <a href="{{ route('packages.single', ['slug' => $package->slug]) }}" class="outline-btn outline-btn-white">Book now</a>
     </div>
  </article>

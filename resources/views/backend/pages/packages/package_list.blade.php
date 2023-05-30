@@ -94,7 +94,7 @@
                                                     data-status="{{ $package->status }}"
                                                     data-days="{{ $package->days }}D/{{ $package->nights }}N"
                                                     data-peoples="{{ $package->peoples }} Peoples"
-                                                    data-price="{{ $package->price }} USD"
+                                                    {{-- data-price="{{ $package->price }} USD" --}}
                              
                                                     data-popular="{{ $package->popular_status }}"
                                                     data-image="{{ $package->image }}"><i
@@ -168,7 +168,7 @@
             var status = button.data('status');
             var days = button.data('days');
             var peoples = button.data('peoples');
-            var price = button.data('price');
+            // var price = button.data('price');
             var description = button.data('description');
             var popular = button.data('popular');
             var category = button.data('category');
@@ -194,7 +194,7 @@
             $('#modal-location').html(location);
             $('#category-badge').html(days);
             $('#price-badge').html(peoples);
-            $('#peoples-badge').html(price);
+            // $('#peoples-badge').html(price);
             $('#modalBody').html(description);
             $('.model-image').attr('src', image);
         });

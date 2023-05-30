@@ -20,7 +20,6 @@ return new class extends Migration
             $table->string('days');
             $table->string('nights');
             $table->string('peoples');
-            $table->string('price');
             $table->string('location');
             $table->string('image');
             $table->longText('description');

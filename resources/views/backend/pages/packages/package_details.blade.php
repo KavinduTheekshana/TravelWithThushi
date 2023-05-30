@@ -55,7 +55,7 @@
                     </span>
                     <span id="category-badge" class="badge bg-primary">{{ $package->days }}D/{{ $package->nights }}N</span>
                     <span id="price-badge" class="badge bg-dark">{{ $package->peoples }} Peoples</span>
-                    <span id="peoples-badge" class="badge bg-warning">{{ $package->price }}</span>
+                    {{-- <span id="peoples-badge" class="badge bg-warning">{{ $package->price }}</span> --}}
                     <br>
                     <br>
                   <p>{!! $package->description !!}</p>

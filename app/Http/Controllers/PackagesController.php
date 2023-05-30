@@ -42,7 +42,7 @@ class PackagesController extends Controller
             'nights' => ['required', 'numeric', 'max:255'],
             'image' => ['required'],
             'peoples' => ['required'],
-            'price' => ['required'],
+            // 'price' => ['required'],
             'description' => ['required'],
         ]);
 
@@ -53,7 +53,7 @@ class PackagesController extends Controller
         $package->days = $request->input('days');
         $package->nights = $request->input('nights');
         $package->peoples = $request->input('peoples');
-        $package->price = $request->input('price');
+        // $package->price = $request->input('price');
         $package->description = $request->input('description');
 
         if ($request->hasFile('image')) {
@@ -116,7 +116,7 @@ class PackagesController extends Controller
             'days' => ['required', 'numeric', 'max:255'],
             'nights' => ['required', 'numeric', 'max:255'],
             'peoples' => ['required'],
-            'price' => ['required'],
+            // 'price' => ['required'],
             'description' => ['required'],
         ]);
 
@@ -128,7 +128,7 @@ class PackagesController extends Controller
         $package->days = $request->input('days');
         $package->nights = $request->input('nights');
         $package->peoples = $request->input('peoples');
-        $package->price = $request->input('price');
+        // $package->price = $request->input('price');
         $package->description = $request->input('description');
 
         $single_package = Packages::find($package_id);
@@ -151,7 +151,7 @@ class PackagesController extends Controller
             'days' => $package->days,
             'nights' => $package->nights,
             'peoples' => $package->peoples,
-            'price' => $package->price,
+            // 'price' => $package->price,
             'description' => $package->description,
             'image' => $package->image,
         );
