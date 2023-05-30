@@ -1178,6 +1178,9 @@ padding: 0 15px;
 .white-hr{
     color: aliceblue;
 }
+.color-theme{
+    color: #0085ba;
+}
 .section-heading {
     margin-bottom: 45px;
 }
