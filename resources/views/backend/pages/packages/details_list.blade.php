@@ -54,7 +54,7 @@
                                         <td><img src="{{ asset($details->image) }}" class="table-image-holder"
                                                 alt="image" /> </td>
                                         <td>Day {{ $details->day }}</td>
-                                        <td>{{ $details->title }}</td>
+                                        <td>{{ Str::limit(strip_tags($details->title), 40, '...') }}</td>
                                         <td>{{ $details->location }}</td>
                                         <td>
                                             @if ($details->status)
