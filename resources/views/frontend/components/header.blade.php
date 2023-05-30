@@ -35,20 +35,20 @@
              <div class="header-social social-icon">
                 <ul>
                    <li>
-                      <a href="#" target="_blank">
+                      <a href="https://www.facebook.com/profile.php?id=100093226444158&mibextid=ZbWKwL" target="_blank">
                          <i class="fab fa-facebook-f" aria-hidden="true"></i>
                       </a>
                    </li>
                    <li>
-                      <a href="#" target="_blank">
-                         <i class="fab fa-twitter" aria-hidden="true"></i>
+                      <a href="https://instagram.com/ithushani?igshid=ZGUzMzM3NWJiOQ==" target="_blank">
+                         <i class="fab fa-instagram" aria-hidden="true"></i>
                       </a>
                    </li>
-                   <li>
+                   {{-- <li>
                       <a href="#" target="_blank">
                          <i class="fab fa-youtube" aria-hidden="true"></i>
                       </a>
-                   </li>
+                   </li> --}}
                 </ul>
              </div>
              <div class="navigation-container d-none d-lg-block">
